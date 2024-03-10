@@ -1,0 +1,12 @@
+{
+    "files": [
+        "homeappwidget.py",
+        "form.ui",
+        "UI_files/koltsegvetes.ui",
+        "ui_pyfiles/KoltsegvetesWindow.py",
+        "koltsegvetes.ui",
+        "KoltsegvetesMainWindow.py",
+        "auto.ui",
+        "szorakozas.ui"
+    ]
+}
