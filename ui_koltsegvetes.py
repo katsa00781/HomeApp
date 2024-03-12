@@ -23,7 +23,7 @@ class Ui_Koltsegvetes(object):
     def setupUi(self, Koltsegvetes):
         if not Koltsegvetes.objectName():
             Koltsegvetes.setObjectName(u"Koltsegvetes")
-        Koltsegvetes.resize(912, 633)
+        # Koltsegvetes.resize(912, 633)
         Koltsegvetes.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(121, 149, 159, 145), stop:1 rgba(255, 255, 255, 255));\n"
 "\n"
 "QPushButton {\n"

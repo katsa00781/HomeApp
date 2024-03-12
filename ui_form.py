@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'form.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.2
+## Created by: Qt User Interface Compiler version 6.6.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -83,51 +83,55 @@ class Ui_HomeAppWidget(object):
         self.frame_2 = QFrame(self.frame)
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setGeometry(QRect(10, 10, 1021, 41))
+        self.frame_2.setStyleSheet(u"QPushButton {\n"
+"background-color:#0275d8;\n"
+"color: #000000;\n"
+"\n"
+"}")
         self.frame_2.setFrameShape(QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.frame_2)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.label = QLabel(self.frame_2)
         self.label.setObjectName(u"label")
-        self.label.setStyleSheet(u"color:#8D3D3D;\n"
-"background: none")
+        self.label.setStyleSheet(u"color: #1C448E")
 
         self.horizontalLayout.addWidget(self.label)
 
-        self.pushButton = QPushButton(self.frame_2)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setStyleSheet(u"background: none;\n"
-"color: #000000")
+        self.szorakozasButton = QPushButton(self.frame_2)
+        self.szorakozasButton.setObjectName(u"szorakozasButton")
+        self.szorakozasButton.setStyleSheet(u"\n"
+"background-color:#0275d8;\n"
+"color: #000000;\n"
+"\n"
+"\n"
+"")
 
-        self.horizontalLayout.addWidget(self.pushButton)
+        self.horizontalLayout.addWidget(self.szorakozasButton)
 
-        self.pushButton_2 = QPushButton(self.frame_2)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setStyleSheet(u"background: none;\n"
-"color: #000000")
+        self.edzestervezesButton = QPushButton(self.frame_2)
+        self.edzestervezesButton.setObjectName(u"edzestervezesButton")
+        self.edzestervezesButton.setStyleSheet(u"")
 
-        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.horizontalLayout.addWidget(self.edzestervezesButton)
 
-        self.pushButton_3 = QPushButton(self.frame_2)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setStyleSheet(u"background: none;\n"
-"color: #000000")
+        self.reszvenyekButton = QPushButton(self.frame_2)
+        self.reszvenyekButton.setObjectName(u"reszvenyekButton")
+        self.reszvenyekButton.setStyleSheet(u"")
 
-        self.horizontalLayout.addWidget(self.pushButton_3)
+        self.horizontalLayout.addWidget(self.reszvenyekButton)
 
-        self.pushButton_4 = QPushButton(self.frame_2)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-        self.pushButton_4.setStyleSheet(u"background: none;\n"
-"color: #000000")
+        self.koltsegvetesButton = QPushButton(self.frame_2)
+        self.koltsegvetesButton.setObjectName(u"koltsegvetesButton")
+        self.koltsegvetesButton.setStyleSheet(u"")
 
-        self.horizontalLayout.addWidget(self.pushButton_4)
+        self.horizontalLayout.addWidget(self.koltsegvetesButton)
 
-        self.pushButton_5 = QPushButton(self.frame_2)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        self.pushButton_5.setStyleSheet(u"background: none;\n"
-"color: #000000")
+        self.bevasarlolistaButton = QPushButton(self.frame_2)
+        self.bevasarlolistaButton.setObjectName(u"bevasarlolistaButton")
+        self.bevasarlolistaButton.setStyleSheet(u"")
 
-        self.horizontalLayout.addWidget(self.pushButton_5)
+        self.horizontalLayout.addWidget(self.bevasarlolistaButton)
 
         self.frame_3 = QFrame(self.frame)
         self.frame_3.setObjectName(u"frame_3")
@@ -610,11 +614,11 @@ class Ui_HomeAppWidget(object):
         self.actionNapt_r.setText(QCoreApplication.translate("HomeAppWidget", u"Napt\u00e1r", None))
         self.actionKarbantart_s.setText(QCoreApplication.translate("HomeAppWidget", u"Karbantart\u00e1s", None))
         self.label.setText(QCoreApplication.translate("HomeAppWidget", u"HomeApp", None))
-        self.pushButton.setText(QCoreApplication.translate("HomeAppWidget", u"Sz\u00f3rakoz\u00e1s", None))
-        self.pushButton_2.setText(QCoreApplication.translate("HomeAppWidget", u"Edz\u00e9stervez\u00e9s", None))
-        self.pushButton_3.setText(QCoreApplication.translate("HomeAppWidget", u"R\u00e9szv\u00e9nyek", None))
-        self.pushButton_4.setText(QCoreApplication.translate("HomeAppWidget", u"K\u00f6lts\u00e9gvet\u00e9s", None))
-        self.pushButton_5.setText(QCoreApplication.translate("HomeAppWidget", u"Bev\u00e1s\u00e1rl\u00f3lista", None))
+        self.szorakozasButton.setText(QCoreApplication.translate("HomeAppWidget", u"Sz\u00f3rakoz\u00e1s", None))
+        self.edzestervezesButton.setText(QCoreApplication.translate("HomeAppWidget", u"Edz\u00e9stervez\u00e9s", None))
+        self.reszvenyekButton.setText(QCoreApplication.translate("HomeAppWidget", u"R\u00e9szv\u00e9nyek", None))
+        self.koltsegvetesButton.setText(QCoreApplication.translate("HomeAppWidget", u"K\u00f6lts\u00e9gvet\u00e9s", None))
+        self.bevasarlolistaButton.setText(QCoreApplication.translate("HomeAppWidget", u"Bev\u00e1s\u00e1rl\u00f3lista", None))
         self.label_2.setText(QCoreApplication.translate("HomeAppWidget", u"Teend\u0151k", None))
         self.checkBox.setText("")
         self.checkBox_2.setText("")

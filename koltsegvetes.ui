@@ -14,8 +14,27 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(121, 149, 159, 145), stop:1 rgba(255, 255, 255, 255));
+   <string notr="true">
 
+QFrame {
+border-radius: 20px;
+background-color: rgba(202, 238,247, 0.15)
+};
+
+background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1,
+                                      stop: 0 #FFE381, stop: 1 #A1B0BA);</string>
+  </property>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>891</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
 QPushButton {
                     
                     border-radius: 3px;
@@ -28,41 +47,18 @@ QPushButton {
                     min-height: 32px;
                     border: none;
                     color: #fff;
-                    background-color: #4f545c;
+                    background-color: #2251AA;
                     
                 
-};
+}
 
 QFrame {
 border-radius: 20px;
 background-color: rgba(202, 238,247, 0.15)
-}</string>
-  </property>
-  <widget class="QFrame" name="InputFrame">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>70</y>
-     <width>265</width>
-     <height>325</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-
-QLabel {
-background: none;
-color: #000000
 };
 
-background-color:rgba(202,238,247, 0.5);
-color: #000000;
-border-radius:20px;
-
-
-
-
-
+background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1,
+                                      stop: 0 #FFE381, stop: 1 #A1B0BA);
 
 
 </string>
@@ -73,140 +69,15 @@ border-radius:20px;
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QFrame" name="frame_8">
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_7">
-       <item>
-        <widget class="QLabel" name="label_7">
-         <property name="text">
-          <string>Digitális rezsi</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lineEdit_6"/>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QFrame" name="frame_3">
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_8">
-       <item>
-        <widget class="QLabel" name="label_8">
-         <property name="text">
-          <string>Megtakarítás</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lineEdit_7"/>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QFrame" name="frame_4">
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_9">
-       <item>
-        <widget class="QLabel" name="label_9">
-         <property name="text">
-          <string>Rezsi</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lineEdit_8"/>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QFrame" name="frame_5">
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_10">
-       <item>
-        <widget class="QLabel" name="label_10">
-         <property name="text">
-          <string>Egyéb</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lineEdit_9"/>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QFrame" name="frame_6">
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_11">
-       <item>
-        <widget class="QLabel" name="label_11">
-         <property name="text">
-          <string>Mama</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lineEdit_10"/>
-       </item>
-      </layout>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QFrame" name="frame_2">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>891</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgba(202,238,247, 0.5);</string>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <family>Academy Engraved LET</family>
+        <pointsize>24</pointsize>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color:#8D3D3D;
 background: none</string>
@@ -217,19 +88,9 @@ background: none</string>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="reszvenyekButton">
       <property name="styleSheet">
-       <string notr="true"> border-radius: 3px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 15px;
-                    padding: 2px 5px;
-                    height: 20px;
-                    min-width: 60px;
-                    min-height: 20px;
-                    border: none;
-                    color: #fff;
-                    background-color: #4f545c;
+       <string notr="true"> 
                   
                 </string>
       </property>
@@ -239,21 +100,9 @@ background: none</string>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="berkalkulatorButton">
       <property name="styleSheet">
-       <string notr="true"> border-radius: 3px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 15px;
-                    padding: 2px 5px;
-                    height: 20px;
-                    min-width: 60px;
-                    min-height: 20px;
-                    border: none;
-                    color: #fff;
-                    background-color: #4f545c;
-                  
-                </string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Bérkalkulátor</string>
@@ -261,21 +110,9 @@ background: none</string>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_5">
+     <widget class="QPushButton" name="bevasarlolistaButton">
       <property name="styleSheet">
-       <string notr="true"> border-radius: 3px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 15px;
-                    padding: 2px 5px;
-                    height: 20px;
-                    min-width: 60px;
-                    min-height: 20px;
-                    border: none;
-                    color: #fff;
-                    background-color: #4f545c;
-                  
-                </string>
+       <string notr="true"> </string>
       </property>
       <property name="text">
        <string>Bevásárlólista</string>
@@ -283,21 +120,9 @@ background: none</string>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="visszaButton">
       <property name="styleSheet">
-       <string notr="true"> border-radius: 3px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 15px;
-                    padding: 2px 5px;
-                    height: 20px;
-                    min-width: 60px;
-                    min-height: 20px;
-                    border: none;
-                    color: #fff;
-                    background-color: #4f545c;
-                  
-                </string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Vissza</string>
@@ -323,7 +148,7 @@ background: none;
 color: #000000
 };
 
-background-color:rgba(202,238,247, 0.5);
+background-color: rgba(202,238,247, 0.5);
 color: #000000;
 border-radius:20px;</string>
    </property>
@@ -336,6 +161,9 @@ border-radius:20px;</string>
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <widget class="QFrame" name="AutoinputFrame">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -498,6 +326,23 @@ border-radius:20px;</string>
       <height>491</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border-radius: 3px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 16px;
+                    padding: 2px 16px;
+                    height: 32px;
+                    min-width: 60px;
+                    min-height: 32px;
+                    border: none;
+                    color: #fff;
+                    background-color: #2251AA;
+                    
+
+}</string>
+    </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
     </property>
@@ -506,22 +351,10 @@ border-radius:20px;</string>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="autoButton">
        <property name="styleSheet">
         <string notr="true">
-            border-radius: 3px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 15px;
-                    padding: 2px 5px;
-                    height: 20px;
-                    min-width: 60px;
-                    min-height: 20px;
-                    border: none;
-                    color: #fff;
-                    background-color: #4f545c;
-                  
-                </string>
+            </string>
        </property>
        <property name="text">
         <string>Autó</string>
@@ -529,22 +362,10 @@ border-radius:20px;</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_8">
+      <widget class="QPushButton" name="szorakozasButton">
        <property name="styleSheet">
         <string notr="true">
-            border-radius: 3px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 15px;
-                    padding: 2px 5px;
-                    height: 20px;
-                    min-width: 60px;
-                    min-height: 20px;
-                    border: none;
-                    color: #fff;
-                    background-color: #4f545c;
-                  
-                </string>
+         </string>
        </property>
        <property name="text">
         <string>Szórakozás</string>
@@ -552,22 +373,10 @@ border-radius:20px;</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="haztartasButton">
        <property name="styleSheet">
         <string notr="true">
-            border-radius: 3px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 15px;
-                    padding: 2px 5px;
-                    height: 20px;
-                    min-width: 60px;
-                    min-height: 20px;
-                    border: none;
-                    color: #fff;
-                    background-color: #4f545c;
-                  
-                </string>
+           </string>
        </property>
        <property name="text">
         <string>Háztartás</string>
@@ -575,22 +384,21 @@ border-radius:20px;</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_9">
+      <widget class="QPushButton" name="hitelButton">
        <property name="styleSheet">
         <string notr="true">
-            border-radius: 3px;
+        border-radius: 3px;
                     font-size: 14px;
                     font-weight: 500;
-                    line-height: 15px;
-                    padding: 2px 5px;
-                    height: 20px;
+                    line-height: 16px;
+                    padding: 2px 16px;
+                    height: 32px;
                     min-width: 60px;
-                    min-height: 20px;
+                    min-height: 32px;
                     border: none;
                     color: #fff;
-                    background-color: #4f545c;
-                  
-                </string>
+                    background-color: #2251AA;
+                    </string>
        </property>
        <property name="text">
         <string>Hitel</string>
@@ -598,22 +406,10 @@ border-radius:20px;</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="egeszegugyButton">
        <property name="styleSheet">
         <string notr="true">
-            border-radius: 3px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 15px;
-                    padding: 2px 5px;
-                    height: 20px;
-                    min-width: 60px;
-                    min-height: 20px;
-                    border: none;
-                    color: #fff;
-                    background-color: #4f545c;
-                  
-                </string>
+          </string>
        </property>
        <property name="text">
         <string>Egészségügy</string>
@@ -631,6 +427,23 @@ border-radius:20px;</string>
       <height>491</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border-radius: 3px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 16px;
+                    padding: 2px 16px;
+                    height: 32px;
+                    min-width: 60px;
+                    min-height: 32px;
+                    border: none;
+                    color: #fff;
+                    background-color: #2251AA;
+                    
+
+}</string>
+    </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
     </property>
@@ -639,21 +452,9 @@ border-radius:20px;</string>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_4">
      <item>
-      <widget class="QPushButton" name="pushButton_10">
+      <widget class="QPushButton" name="digRezsiButton">
        <property name="styleSheet">
-        <string notr="true"> border-radius: 3px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 15px;
-                    padding: 2px 5px;
-                    height: 20px;
-                    min-width: 60px;
-                    min-height: 20px;
-                    border: none;
-                    color: #fff;
-                    background-color: #4f545c;
-                  
-                </string>
+        <string notr="true"> </string>
        </property>
        <property name="text">
         <string>Digitális Rezsi</string>
@@ -661,21 +462,9 @@ border-radius:20px;</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_11">
+      <widget class="QPushButton" name="megtakaritasButton">
        <property name="styleSheet">
-        <string notr="true"> border-radius: 3px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 15px;
-                    padding: 2px 5px;
-                    height: 20px;
-                    min-width: 60px;
-                    min-height: 20px;
-                    border: none;
-                    color: #fff;
-                    background-color: #4f545c;
-                  
-                </string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>Megtakarítás</string>
@@ -683,21 +472,9 @@ border-radius:20px;</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_12">
+      <widget class="QPushButton" name="rezsiButton">
        <property name="styleSheet">
-        <string notr="true"> border-radius: 3px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 15px;
-                    padding: 2px 5px;
-                    height: 20px;
-                    min-width: 60px;
-                    min-height: 20px;
-                    border: none;
-                    color: #fff;
-                    background-color: #4f545c;
-                  
-                </string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>Rezsi</string>
@@ -705,21 +482,9 @@ border-radius:20px;</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_13">
+      <widget class="QPushButton" name="mamaButton">
        <property name="styleSheet">
-        <string notr="true"> border-radius: 3px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 15px;
-                    padding: 2px 5px;
-                    height: 20px;
-                    min-width: 60px;
-                    min-height: 20px;
-                    border: none;
-                    color: #fff;
-                    background-color: #4f545c;
-                  
-                </string>
+        <string notr="true"> </string>
        </property>
        <property name="text">
         <string>Mama</string>
@@ -727,19 +492,9 @@ border-radius:20px;</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_14">
+      <widget class="QPushButton" name="egyebButton">
        <property name="styleSheet">
-        <string notr="true"> border-radius: 3px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 15px;
-                    padding: 2px 5px;
-                    height: 20px;
-                    min-width: 60px;
-                    min-height: 20px;
-                    border: none;
-                    color: #fff;
-                    background-color: #4f545c;
+        <string notr="true"> 
                   
                 </string>
        </property>
@@ -778,6 +533,255 @@ border-radius:20px;</string>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
+   <widget class="QComboBox" name="fokategoria_comboBox">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>20</y>
+      <width>103</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Autó</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Szórakozás</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Háztartás</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Hitel</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Egészségügy</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rezsi</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Digitális Rezsi</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mama</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Megtakarítás</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Egyéb</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Főkategória</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>30</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Alkatergória</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="alkategoria_comboBox">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>20</y>
+      <width>103</width>
+      <height>32</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>511</width>
+      <height>131</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>265</width>
+     <height>325</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+
+QLabel {
+background: none;
+color: #000000
+};
+
+background-color: rgba(202,238,247, 0.5);
+color: #000000;
+border-radius:20px;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <widget class="QFrame" name="AutoinputFrame_2">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Rezsi</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_6"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="szorakozasinputFrame_2">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Digitális Rezsi</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_7"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="haztartasInputFrame_2">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Mama</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_8"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="hitelInputFrame_2">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>Megtakarítás/oktatás</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_9"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_8">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>Egyéb</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_10"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

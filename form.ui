@@ -52,6 +52,13 @@ color:#000000;
          <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color:#0275d8;
+color: #000000;
+
+}</string>
+       </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
        </property>
@@ -62,8 +69,7 @@ color:#000000;
         <item>
          <widget class="QLabel" name="label">
           <property name="styleSheet">
-           <string notr="true">color:#8D3D3D;
-background: none</string>
+           <string notr="true">color: #1C448E</string>
           </property>
           <property name="text">
            <string>HomeApp</string>
@@ -71,10 +77,14 @@ background: none</string>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="szorakozasButton">
           <property name="styleSheet">
-           <string notr="true">background: none;
-color: #000000</string>
+           <string notr="true">
+background-color:#0275d8;
+color: #000000;
+
+
+</string>
           </property>
           <property name="text">
            <string>Szórakozás</string>
@@ -82,10 +92,9 @@ color: #000000</string>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="edzestervezesButton">
           <property name="styleSheet">
-           <string notr="true">background: none;
-color: #000000</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Edzéstervezés</string>
@@ -93,10 +102,9 @@ color: #000000</string>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_3">
+         <widget class="QPushButton" name="reszvenyekButton">
           <property name="styleSheet">
-           <string notr="true">background: none;
-color: #000000</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Részvények</string>
@@ -104,10 +112,9 @@ color: #000000</string>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_4">
+         <widget class="QPushButton" name="koltsegvetesButton">
           <property name="styleSheet">
-           <string notr="true">background: none;
-color: #000000</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Költségvetés</string>
@@ -115,10 +122,9 @@ color: #000000</string>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_5">
+         <widget class="QPushButton" name="bevasarlolistaButton">
           <property name="styleSheet">
-           <string notr="true">background: none;
-color: #000000</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Bevásárlólista</string>
@@ -366,7 +372,8 @@ background: none
             <item>
              <widget class="QFrame" name="auto_frame">
               <property name="styleSheet">
-               <string notr="true">padding: 2px</string>
+               <string notr="true">padding: 2px;
+background-color: rgba(119, 157, 228, 0.6)</string>
               </property>
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
@@ -397,23 +404,12 @@ background: none
                      </brush>
                     </colorrole>
                     <colorrole role="Button">
-                     <brush brushstyle="LinearGradientPattern">
-                      <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
-                       <gradientstop position="0.000000000000000">
-                        <color alpha="145">
-                         <red>121</red>
-                         <green>149</green>
-                         <blue>159</blue>
-                        </color>
-                       </gradientstop>
-                       <gradientstop position="1.000000000000000">
-                        <color alpha="255">
-                         <red>255</red>
-                         <green>255</green>
-                         <blue>255</blue>
-                        </color>
-                       </gradientstop>
-                      </gradient>
+                     <brush brushstyle="SolidPattern">
+                      <color alpha="153">
+                       <red>119</red>
+                       <green>157</green>
+                       <blue>228</blue>
+                      </color>
                      </brush>
                     </colorrole>
                     <colorrole role="Text">
@@ -435,43 +431,21 @@ background: none
                      </brush>
                     </colorrole>
                     <colorrole role="Base">
-                     <brush brushstyle="LinearGradientPattern">
-                      <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
-                       <gradientstop position="0.000000000000000">
-                        <color alpha="145">
-                         <red>121</red>
-                         <green>149</green>
-                         <blue>159</blue>
-                        </color>
-                       </gradientstop>
-                       <gradientstop position="1.000000000000000">
-                        <color alpha="255">
-                         <red>255</red>
-                         <green>255</green>
-                         <blue>255</blue>
-                        </color>
-                       </gradientstop>
-                      </gradient>
+                     <brush brushstyle="SolidPattern">
+                      <color alpha="153">
+                       <red>119</red>
+                       <green>157</green>
+                       <blue>228</blue>
+                      </color>
                      </brush>
                     </colorrole>
                     <colorrole role="Window">
-                     <brush brushstyle="LinearGradientPattern">
-                      <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
-                       <gradientstop position="0.000000000000000">
-                        <color alpha="145">
-                         <red>121</red>
-                         <green>149</green>
-                         <blue>159</blue>
-                        </color>
-                       </gradientstop>
-                       <gradientstop position="1.000000000000000">
-                        <color alpha="255">
-                         <red>255</red>
-                         <green>255</green>
-                         <blue>255</blue>
-                        </color>
-                       </gradientstop>
-                      </gradient>
+                     <brush brushstyle="SolidPattern">
+                      <color alpha="153">
+                       <red>119</red>
+                       <green>157</green>
+                       <blue>228</blue>
+                      </color>
                      </brush>
                     </colorrole>
                     <colorrole role="PlaceholderText">
@@ -495,23 +469,12 @@ background: none
                      </brush>
                     </colorrole>
                     <colorrole role="Button">
-                     <brush brushstyle="LinearGradientPattern">
-                      <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
-                       <gradientstop position="0.000000000000000">
-                        <color alpha="145">
-                         <red>121</red>
-                         <green>149</green>
-                         <blue>159</blue>
-                        </color>
-                       </gradientstop>
-                       <gradientstop position="1.000000000000000">
-                        <color alpha="255">
-                         <red>255</red>
-                         <green>255</green>
-                         <blue>255</blue>
-                        </color>
-                       </gradientstop>
-                      </gradient>
+                     <brush brushstyle="SolidPattern">
+                      <color alpha="153">
+                       <red>119</red>
+                       <green>157</green>
+                       <blue>228</blue>
+                      </color>
                      </brush>
                     </colorrole>
                     <colorrole role="Text">
@@ -533,43 +496,21 @@ background: none
                      </brush>
                     </colorrole>
                     <colorrole role="Base">
-                     <brush brushstyle="LinearGradientPattern">
-                      <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
-                       <gradientstop position="0.000000000000000">
-                        <color alpha="145">
-                         <red>121</red>
-                         <green>149</green>
-                         <blue>159</blue>
-                        </color>
-                       </gradientstop>
-                       <gradientstop position="1.000000000000000">
-                        <color alpha="255">
-                         <red>255</red>
-                         <green>255</green>
-                         <blue>255</blue>
-                        </color>
-                       </gradientstop>
-                      </gradient>
+                     <brush brushstyle="SolidPattern">
+                      <color alpha="153">
+                       <red>119</red>
+                       <green>157</green>
+                       <blue>228</blue>
+                      </color>
                      </brush>
                     </colorrole>
                     <colorrole role="Window">
-                     <brush brushstyle="LinearGradientPattern">
-                      <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
-                       <gradientstop position="0.000000000000000">
-                        <color alpha="145">
-                         <red>121</red>
-                         <green>149</green>
-                         <blue>159</blue>
-                        </color>
-                       </gradientstop>
-                       <gradientstop position="1.000000000000000">
-                        <color alpha="255">
-                         <red>255</red>
-                         <green>255</green>
-                         <blue>255</blue>
-                        </color>
-                       </gradientstop>
-                      </gradient>
+                     <brush brushstyle="SolidPattern">
+                      <color alpha="153">
+                       <red>119</red>
+                       <green>157</green>
+                       <blue>228</blue>
+                      </color>
                      </brush>
                     </colorrole>
                     <colorrole role="PlaceholderText">
@@ -593,23 +534,12 @@ background: none
                      </brush>
                     </colorrole>
                     <colorrole role="Button">
-                     <brush brushstyle="LinearGradientPattern">
-                      <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
-                       <gradientstop position="0.000000000000000">
-                        <color alpha="145">
-                         <red>121</red>
-                         <green>149</green>
-                         <blue>159</blue>
-                        </color>
-                       </gradientstop>
-                       <gradientstop position="1.000000000000000">
-                        <color alpha="255">
-                         <red>255</red>
-                         <green>255</green>
-                         <blue>255</blue>
-                        </color>
-                       </gradientstop>
-                      </gradient>
+                     <brush brushstyle="SolidPattern">
+                      <color alpha="153">
+                       <red>119</red>
+                       <green>157</green>
+                       <blue>228</blue>
+                      </color>
                      </brush>
                     </colorrole>
                     <colorrole role="Text">
@@ -631,43 +561,21 @@ background: none
                      </brush>
                     </colorrole>
                     <colorrole role="Base">
-                     <brush brushstyle="LinearGradientPattern">
-                      <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
-                       <gradientstop position="0.000000000000000">
-                        <color alpha="145">
-                         <red>121</red>
-                         <green>149</green>
-                         <blue>159</blue>
-                        </color>
-                       </gradientstop>
-                       <gradientstop position="1.000000000000000">
-                        <color alpha="255">
-                         <red>255</red>
-                         <green>255</green>
-                         <blue>255</blue>
-                        </color>
-                       </gradientstop>
-                      </gradient>
+                     <brush brushstyle="SolidPattern">
+                      <color alpha="153">
+                       <red>119</red>
+                       <green>157</green>
+                       <blue>228</blue>
+                      </color>
                      </brush>
                     </colorrole>
                     <colorrole role="Window">
-                     <brush brushstyle="LinearGradientPattern">
-                      <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
-                       <gradientstop position="0.000000000000000">
-                        <color alpha="145">
-                         <red>121</red>
-                         <green>149</green>
-                         <blue>159</blue>
-                        </color>
-                       </gradientstop>
-                       <gradientstop position="1.000000000000000">
-                        <color alpha="255">
-                         <red>255</red>
-                         <green>255</green>
-                         <blue>255</blue>
-                        </color>
-                       </gradientstop>
-                      </gradient>
+                     <brush brushstyle="SolidPattern">
+                      <color alpha="153">
+                       <red>119</red>
+                       <green>157</green>
+                       <blue>228</blue>
+                      </color>
                      </brush>
                     </colorrole>
                     <colorrole role="PlaceholderText">
@@ -922,6 +830,9 @@ background: none
             </item>
             <item>
              <widget class="QFrame" name="digitalis_rezsi_frame">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgba(119, 157, 228, 0.6)</string>
+              </property>
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
               </property>

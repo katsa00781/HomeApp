@@ -7,6 +7,8 @@
         "koltsegvetes.ui",
         "KoltsegvetesMainWindow.py",
         "auto.ui",
-        "szorakozas.ui"
+        "szorakozas.ui",
+        "haztartas.ui",
+        "berkalkulator.ui"
     ]
 }
