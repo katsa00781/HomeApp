@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>912</width>
-    <height>633</height>
+    <height>697</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -90,9 +90,7 @@ background: none</string>
     <item>
      <widget class="QPushButton" name="reszvenyekButton">
       <property name="styleSheet">
-       <string notr="true"> 
-                  
-                </string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Részvények</string>
@@ -112,7 +110,7 @@ background: none</string>
     <item>
      <widget class="QPushButton" name="bevasarlolistaButton">
       <property name="styleSheet">
-       <string notr="true"> </string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Bevásárlólista</string>
@@ -137,20 +135,19 @@ background: none</string>
      <x>290</x>
      <y>70</y>
      <width>265</width>
-     <height>325</height>
+     <height>341</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
+    <string notr="true">QLineEdit{
 
-QLabel {
-background: none;
-color: #000000
-};
+background-color: rgba(206, 194, 136, 0.5);
+}
 
+QFrame{
 background-color: rgba(202,238,247, 0.5);
 color: #000000;
-border-radius:20px;</string>
+border-radius:20px;}</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -280,7 +277,7 @@ border-radius:20px;</string>
      <x>570</x>
      <y>70</y>
      <width>331</width>
-     <height>551</height>
+     <height>611</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -323,7 +320,7 @@ border-radius:20px;</string>
       <x>10</x>
       <y>50</y>
       <width>151</width>
-      <height>491</height>
+      <height>551</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -353,8 +350,7 @@ border-radius: 3px;
      <item>
       <widget class="QPushButton" name="autoButton">
        <property name="styleSheet">
-        <string notr="true">
-            </string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>Autó</string>
@@ -364,8 +360,7 @@ border-radius: 3px;
      <item>
       <widget class="QPushButton" name="szorakozasButton">
        <property name="styleSheet">
-        <string notr="true">
-         </string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>Szórakozás</string>
@@ -375,8 +370,7 @@ border-radius: 3px;
      <item>
       <widget class="QPushButton" name="haztartasButton">
        <property name="styleSheet">
-        <string notr="true">
-           </string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>Háztartás</string>
@@ -408,8 +402,7 @@ border-radius: 3px;
      <item>
       <widget class="QPushButton" name="egeszegugyButton">
        <property name="styleSheet">
-        <string notr="true">
-          </string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>Egészségügy</string>
@@ -424,7 +417,7 @@ border-radius: 3px;
       <x>170</x>
       <y>50</y>
       <width>151</width>
-      <height>491</height>
+      <height>551</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -454,7 +447,7 @@ border-radius: 3px;
      <item>
       <widget class="QPushButton" name="digRezsiButton">
        <property name="styleSheet">
-        <string notr="true"> </string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>Digitális Rezsi</string>
@@ -484,7 +477,7 @@ border-radius: 3px;
      <item>
       <widget class="QPushButton" name="mamaButton">
        <property name="styleSheet">
-        <string notr="true"> </string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>Mama</string>
@@ -494,9 +487,7 @@ border-radius: 3px;
      <item>
       <widget class="QPushButton" name="egyebButton">
        <property name="styleSheet">
-        <string notr="true"> 
-                  
-                </string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>Egyéb</string>
@@ -510,22 +501,25 @@ border-radius: 3px;
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>400</y>
+     <y>420</y>
      <width>551</width>
-     <height>221</height>
+     <height>261</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
+    <string notr="true">QLineEdit{
 
-QLabel {
-background: none;
-color: #000000
-};
+background-color: rgba(206, 194, 136, 0.5);
+}
 
-background-color:rgba(202,238,247, 0.5);
+QFrame{
+background-color: rgba(202,238,247, 0.5);
 color: #000000;
-border-radius:20px;</string>
+border-radius:20px;}
+
+QComboBox{
+color: #000000
+}</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -633,10 +627,60 @@ border-radius:20px;</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>70</y>
+      <y>120</y>
       <width>511</width>
       <height>131</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>70</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Összeg</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_11">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="felvitelButton">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>70</y>
+      <width>100</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">   border-radius: 3px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 16px;
+                    padding: 2px 16px;
+                    height: 32px;
+                    min-width: 60px;
+                    min-height: 32px;
+                    border: none;
+                    color: #fff;
+                    background-color: #2251AA;
+                    </string>
+    </property>
+    <property name="text">
+     <string>Felvitel</string>
     </property>
    </widget>
   </widget>
@@ -646,20 +690,19 @@ border-radius:20px;</string>
      <x>20</x>
      <y>70</y>
      <width>265</width>
-     <height>325</height>
+     <height>341</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
+    <string notr="true">QLineEdit{
 
-QLabel {
-background: none;
-color: #000000
-};
+background-color: rgba(206, 194, 136, 0.5);
+}
 
+QFrame{
 background-color: rgba(202,238,247, 0.5);
 color: #000000;
-border-radius:20px;</string>
+border-radius:20px;}</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>

@@ -175,6 +175,7 @@ class Ui_Berkalkulator(object):
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.frame_3 = QFrame(self.frame_2)
         self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setStyleSheet(u"")
         self.frame_3.setFrameShape(QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.frame_3)

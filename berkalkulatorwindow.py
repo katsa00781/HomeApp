@@ -16,6 +16,8 @@ class Berkalkulator(QtWidgets.QWidget):
         super().__init__(parent)
         self.ui = Ui_Berkalkulator()
         self.ui.setupUi(self)
+        
+        
 
 if __name__ == "__main__":
     app = QApplication()

@@ -11,6 +11,8 @@ from PySide6.QtWidgets import QApplication, QMainWindow
 #     pyside6-uic koltsegvetes.ui -o ui_koltsegvetes.py, or
 #     pyside2-uic form.ui -o ui_form.py
 from ui_koltsegvetes import Ui_Koltsegvetes
+from berkalkulatorwindow import Berkalkulator
+from classes.databases import CreateDatabase
 
 
 class KoltsegvetesMainWindow(QtWidgets.QWidget):
@@ -19,8 +21,18 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
         self.ui = Ui_Koltsegvetes()
         self.ui.setupUi(self)
         
+        CreateDatabase("koltsegvetes.db", "főkategoria")
         
-
+        #Ablakok meggyitása
+        self.ui.berkalkulatorButton.clicked.connect(self.berkalkulator)
+        
+        
+        
+        
+        
+    def berkalkulator(self):
+        self.window =  Berkalkulator()
+        self.window.show()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
