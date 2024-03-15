@@ -198,7 +198,7 @@ border-radius:20px;}</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_2"/>
+        <widget class="QLineEdit" name="szorakozasLineEdit"/>
        </item>
       </layout>
      </widget>
@@ -220,7 +220,7 @@ border-radius:20px;}</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_3"/>
+        <widget class="QLineEdit" name="haztartasLineEdit"/>
        </item>
       </layout>
      </widget>
@@ -242,7 +242,7 @@ border-radius:20px;}</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_4"/>
+        <widget class="QLineEdit" name="hitelLineEdit"/>
        </item>
       </layout>
      </widget>
@@ -264,7 +264,7 @@ border-radius:20px;}</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_5"/>
+        <widget class="QLineEdit" name="egeszsegugyLineEdit"/>
        </item>
       </layout>
      </widget>
@@ -383,8 +383,8 @@ border-radius:20px;</string>
    <widget class="QPushButton" name="resetButton">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>500</y>
+      <x>220</x>
+      <y>460</y>
       <width>100</width>
       <height>36</height>
      </rect>
@@ -399,8 +399,8 @@ border-radius:20px;</string>
    <widget class="QPushButton" name="delete_allButton">
     <property name="geometry">
      <rect>
-      <x>179</x>
-      <y>500</y>
+      <x>180</x>
+      <y>510</y>
       <width>141</width>
       <height>36</height>
      </rect>
@@ -410,6 +410,19 @@ border-radius:20px;</string>
     </property>
     <property name="text">
      <string>Minden törlése</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sumButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>500</y>
+      <width>121</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>összesítés</string>
     </property>
    </widget>
   </widget>
@@ -759,7 +772,7 @@ border-radius:20px;}</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_6"/>
+        <widget class="QLineEdit" name="rezsiLineEdit"/>
        </item>
       </layout>
      </widget>
@@ -781,7 +794,7 @@ border-radius:20px;}</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_7"/>
+        <widget class="QLineEdit" name="digitrezsLineEdit"/>
        </item>
       </layout>
      </widget>
@@ -803,7 +816,7 @@ border-radius:20px;}</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_8"/>
+        <widget class="QLineEdit" name="mamaLineEdit"/>
        </item>
       </layout>
      </widget>
@@ -825,7 +838,7 @@ border-radius:20px;}</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_9"/>
+        <widget class="QLineEdit" name="magtakaritasLineEdit"/>
        </item>
       </layout>
      </widget>
@@ -847,7 +860,7 @@ border-radius:20px;}</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_10"/>
+        <widget class="QLineEdit" name="egyebLineEdit"/>
        </item>
       </layout>
      </widget>

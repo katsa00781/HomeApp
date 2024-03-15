@@ -151,10 +151,10 @@ class Ui_Koltsegvetes(object):
 
         self.horizontalLayout_3.addWidget(self.label_3)
 
-        self.lineEdit_2 = QLineEdit(self.szorakozasinputFrame)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.szorakozasLineEdit = QLineEdit(self.szorakozasinputFrame)
+        self.szorakozasLineEdit.setObjectName(u"szorakozasLineEdit")
 
-        self.horizontalLayout_3.addWidget(self.lineEdit_2)
+        self.horizontalLayout_3.addWidget(self.szorakozasLineEdit)
 
 
         self.verticalLayout_2.addWidget(self.szorakozasinputFrame)
@@ -170,10 +170,10 @@ class Ui_Koltsegvetes(object):
 
         self.horizontalLayout_4.addWidget(self.label_4)
 
-        self.lineEdit_3 = QLineEdit(self.haztartasInputFrame)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.haztartasLineEdit = QLineEdit(self.haztartasInputFrame)
+        self.haztartasLineEdit.setObjectName(u"haztartasLineEdit")
 
-        self.horizontalLayout_4.addWidget(self.lineEdit_3)
+        self.horizontalLayout_4.addWidget(self.haztartasLineEdit)
 
 
         self.verticalLayout_2.addWidget(self.haztartasInputFrame)
@@ -189,10 +189,10 @@ class Ui_Koltsegvetes(object):
 
         self.horizontalLayout_5.addWidget(self.label_5)
 
-        self.lineEdit_4 = QLineEdit(self.hitelInputFrame)
-        self.lineEdit_4.setObjectName(u"lineEdit_4")
+        self.hitelLineEdit = QLineEdit(self.hitelInputFrame)
+        self.hitelLineEdit.setObjectName(u"hitelLineEdit")
 
-        self.horizontalLayout_5.addWidget(self.lineEdit_4)
+        self.horizontalLayout_5.addWidget(self.hitelLineEdit)
 
 
         self.verticalLayout_2.addWidget(self.hitelInputFrame)
@@ -208,10 +208,10 @@ class Ui_Koltsegvetes(object):
 
         self.horizontalLayout_6.addWidget(self.label_6)
 
-        self.lineEdit_5 = QLineEdit(self.frame_7)
-        self.lineEdit_5.setObjectName(u"lineEdit_5")
+        self.egeszsegugyLineEdit = QLineEdit(self.frame_7)
+        self.egeszsegugyLineEdit.setObjectName(u"egeszsegugyLineEdit")
 
-        self.horizontalLayout_6.addWidget(self.lineEdit_5)
+        self.horizontalLayout_6.addWidget(self.egeszsegugyLineEdit)
 
 
         self.verticalLayout_2.addWidget(self.frame_7)
@@ -267,12 +267,15 @@ class Ui_Koltsegvetes(object):
         self.sorTorleseButton.setGeometry(QRect(220, 560, 100, 36))
         self.resetButton = QPushButton(self.frame_9)
         self.resetButton.setObjectName(u"resetButton")
-        self.resetButton.setGeometry(QRect(30, 500, 100, 36))
+        self.resetButton.setGeometry(QRect(220, 460, 100, 36))
         self.resetButton.setStyleSheet(u"background-color: #ff6b6b")
         self.delete_allButton = QPushButton(self.frame_9)
         self.delete_allButton.setObjectName(u"delete_allButton")
-        self.delete_allButton.setGeometry(QRect(179, 500, 141, 36))
+        self.delete_allButton.setGeometry(QRect(180, 510, 141, 36))
         self.delete_allButton.setStyleSheet(u"background-color: #ff6b6b")
+        self.sumButton = QPushButton(self.frame_9)
+        self.sumButton.setObjectName(u"sumButton")
+        self.sumButton.setGeometry(QRect(20, 500, 121, 36))
         self.frame_10 = QFrame(Koltsegvetes)
         self.frame_10.setObjectName(u"frame_10")
         self.frame_10.setGeometry(QRect(10, 420, 731, 261))
@@ -398,10 +401,10 @@ class Ui_Koltsegvetes(object):
 
         self.horizontalLayout_7.addWidget(self.label_7)
 
-        self.lineEdit_6 = QLineEdit(self.AutoinputFrame_2)
-        self.lineEdit_6.setObjectName(u"lineEdit_6")
+        self.rezsiLineEdit = QLineEdit(self.AutoinputFrame_2)
+        self.rezsiLineEdit.setObjectName(u"rezsiLineEdit")
 
-        self.horizontalLayout_7.addWidget(self.lineEdit_6)
+        self.horizontalLayout_7.addWidget(self.rezsiLineEdit)
 
 
         self.verticalLayout_5.addWidget(self.AutoinputFrame_2)
@@ -417,10 +420,10 @@ class Ui_Koltsegvetes(object):
 
         self.horizontalLayout_8.addWidget(self.label_8)
 
-        self.lineEdit_7 = QLineEdit(self.szorakozasinputFrame_2)
-        self.lineEdit_7.setObjectName(u"lineEdit_7")
+        self.digitrezsLineEdit = QLineEdit(self.szorakozasinputFrame_2)
+        self.digitrezsLineEdit.setObjectName(u"digitrezsLineEdit")
 
-        self.horizontalLayout_8.addWidget(self.lineEdit_7)
+        self.horizontalLayout_8.addWidget(self.digitrezsLineEdit)
 
 
         self.verticalLayout_5.addWidget(self.szorakozasinputFrame_2)
@@ -436,10 +439,10 @@ class Ui_Koltsegvetes(object):
 
         self.horizontalLayout_9.addWidget(self.label_9)
 
-        self.lineEdit_8 = QLineEdit(self.haztartasInputFrame_2)
-        self.lineEdit_8.setObjectName(u"lineEdit_8")
+        self.mamaLineEdit = QLineEdit(self.haztartasInputFrame_2)
+        self.mamaLineEdit.setObjectName(u"mamaLineEdit")
 
-        self.horizontalLayout_9.addWidget(self.lineEdit_8)
+        self.horizontalLayout_9.addWidget(self.mamaLineEdit)
 
 
         self.verticalLayout_5.addWidget(self.haztartasInputFrame_2)
@@ -455,10 +458,10 @@ class Ui_Koltsegvetes(object):
 
         self.horizontalLayout_10.addWidget(self.label_10)
 
-        self.lineEdit_9 = QLineEdit(self.hitelInputFrame_2)
-        self.lineEdit_9.setObjectName(u"lineEdit_9")
+        self.magtakaritasLineEdit = QLineEdit(self.hitelInputFrame_2)
+        self.magtakaritasLineEdit.setObjectName(u"magtakaritasLineEdit")
 
-        self.horizontalLayout_10.addWidget(self.lineEdit_9)
+        self.horizontalLayout_10.addWidget(self.magtakaritasLineEdit)
 
 
         self.verticalLayout_5.addWidget(self.hitelInputFrame_2)
@@ -474,10 +477,10 @@ class Ui_Koltsegvetes(object):
 
         self.horizontalLayout_11.addWidget(self.label_11)
 
-        self.lineEdit_10 = QLineEdit(self.frame_8)
-        self.lineEdit_10.setObjectName(u"lineEdit_10")
+        self.egyebLineEdit = QLineEdit(self.frame_8)
+        self.egyebLineEdit.setObjectName(u"egyebLineEdit")
 
-        self.horizontalLayout_11.addWidget(self.lineEdit_10)
+        self.horizontalLayout_11.addWidget(self.egyebLineEdit)
 
 
         self.verticalLayout_5.addWidget(self.frame_8)
@@ -511,6 +514,7 @@ class Ui_Koltsegvetes(object):
         self.sorTorleseButton.setText(QCoreApplication.translate("Koltsegvetes", u"Sor t\u00f6rl\u00e9se", None))
         self.resetButton.setText(QCoreApplication.translate("Koltsegvetes", u"RESET", None))
         self.delete_allButton.setText(QCoreApplication.translate("Koltsegvetes", u"Minden t\u00f6rl\u00e9se", None))
+        self.sumButton.setText(QCoreApplication.translate("Koltsegvetes", u"\u00f6sszes\u00edt\u00e9s", None))
         self.fokategoria_comboBox.setItemText(0, QCoreApplication.translate("Koltsegvetes", u"Aut\u00f3", None))
         self.fokategoria_comboBox.setItemText(1, QCoreApplication.translate("Koltsegvetes", u"Sz\u00f3rakoz\u00e1s", None))
         self.fokategoria_comboBox.setItemText(2, QCoreApplication.translate("Koltsegvetes", u"H\u00e1ztart\u00e1s", None))

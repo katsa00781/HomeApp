@@ -14,7 +14,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow
 #     pyside2-uic form.ui -o ui_form.py
 from ui_koltsegvetes import Ui_Koltsegvetes
 from berkalkulatorwindow import Berkalkulator
-from classes.databases import CreateDatabase, CreateSubDatabase,  SubCategoryValueToDatabase, Query_Database, Query_Value_from_dasboard_in_Database, DeleteRow, DeleteAll
+from classes.databases import CreateDatabase, CreateSubDatabase,  SubCategoryValueToDatabase, Query_Database, Query_Value_from_dasboard_in_Database, DeleteRow, DeleteAll, CalculateSum, AddSumValueToDatabase
 
 
 
@@ -44,9 +44,27 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
         
         #Költségvetés tábla törlése
         self.ui.resetButton.clicked.connect(self.tabla_torlese)
-        self.ui.delete_allButton.clicked.connect(self.osszes_adat_torlese)    
+        self.ui.delete_allButton.clicked.connect(self.osszes_adat_torlese) 
         
+        #QlineEditek feltöltése
+        self.ui.sumButton.clicked.connect(self.add_values)
         
+           
+    def add_values(self):
+        self.path = "koltsegvetes.db"
+        self.table = self.ui.fokategoria_comboBox.currentText()
+        
+        self.query = CalculateSum(path=self.path, table=self.table).get_szum()
+        cash = int(self.query)
+        print(cash)
+        
+        try:
+            AddSumValueToDatabase(path=self.path, table="Költségvetés", values=cash, category=self.table)
+            self.ui.textEdit.setText("Sikeres hozzáadás!")
+            self.ui.textEdit.setTextColor("green")
+        except:
+            self.ui.textEdit.setText(f"Hiba! {ValueError}")
+            self.ui.textEdit.setTextColor("red")
         
     def create_table(self):
         path = "koltsegvetes.db"

@@ -10,21 +10,23 @@ class CreateDatabase:
         self.connection = sqlite3.connect(self.path)
         self.cursor = self.connection.cursor()
         
-        self.cursor.execute(
-            f"""CREATE TABLE IF NOT EXISTS {self.table}  (
-            ID INTEGER PRIMARY KEY,
-            Autó INTEGER, 
-            Szórakozás INTEGER, 
-            Háztartás INTEGER, 
-            Hitel INTEGER, 
-            Egészségügy INTEGER, 
-            Rezsi INTEGER, 
-            DigitálisRezsi INTEGER, 
-            Mama INTEGER, 
-            Megtakarítás INTEGER, 
-            Egyeb INTEGER
-            )""")
+        try:
         
+            self.cursor.execute(
+                f"""CREATE TABLE IF NOT EXISTS {self.table}  (
+                Autó INTEGER, 
+                Szórakozás INTEGER, 
+                Háztartás INTEGER, 
+                Hitel INTEGER, 
+                Egészségügy INTEGER, 
+                Rezsi INTEGER, 
+                DigitálisRezsi INTEGER, 
+                Mama INTEGER, 
+                Megtakarítás INTEGER, 
+                Egyeb INTEGER
+                )""")
+        except:
+            print("Hiba!")
             
         
         self.connection.commit()   
@@ -241,3 +243,44 @@ class DeleteAll:
         
         self.connection.commit()
         self.connection.close()
+
+class CalculateSum:
+    def __init__(self, path, table):
+        self.path = path
+        self.table = table
+        
+        self.connection = sqlite3.connect(self.path)
+        self.cursor = self.connection.cursor()
+        
+        self.cursor.execute(
+            f"SELECT SUM(összeg) FROM {self.table}"
+        )   
+        
+    def get_szum(self):
+        return self.cursor.fetchone()[0]
+        
+        self.connection.commit()
+        self.connection.close()        
+
+ 
+
+class AddSumValueToDatabase:
+    def __init__ (self, path, table, values, category): 
+        self.path = path
+        self.table = table
+        self.values = values
+        self.category = category
+        
+        self.connection = sqlite3.connect(self.path)
+        self.cursor = self.connection.cursor()
+        
+        self.cursor.execute(
+            f"INSERT INTO {self.table} ({self.category} ) VALUES (?)",
+            (self.values,)
+        )     
+        
+        self.connection.commit()
+        self.connection.close()
+
+CreateDatabase(path="koltsegvetes.db" , table="Költségvetés")  
+AddSumValueToDatabase(path="koltsegvetes.db", table="Költségvetés", values=5000, category="Autó")     
