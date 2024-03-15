@@ -383,7 +383,7 @@ border-radius:20px;</string>
    <widget class="QPushButton" name="resetButton">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>30</x>
       <y>500</y>
       <width>100</width>
       <height>36</height>
@@ -394,6 +394,22 @@ border-radius:20px;</string>
     </property>
     <property name="text">
      <string>RESET</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="delete_allButton">
+    <property name="geometry">
+     <rect>
+      <x>179</x>
+      <y>500</y>
+      <width>141</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #ff6b6b</string>
+    </property>
+    <property name="text">
+     <string>Minden törlése</string>
     </property>
    </widget>
   </widget>

@@ -227,4 +227,17 @@ class DeleteRow:
         self.connection.commit()
         self.connection.close()
 
-Query_Value_from_dasboard_in_Database(path="koltsegvetes.db", table="Autó")        
+class DeleteAll:
+    def __init__(self, path, table):
+        self.path = path
+        self.table = table
+        
+        self.connection = sqlite3.connect(self.path)
+        self.cursor = self.connection.cursor()
+        
+        self.cursor.execute(
+            f"DELETE FROM {self.table}"
+        )     
+        
+        self.connection.commit()
+        self.connection.close()

@@ -14,7 +14,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow
 #     pyside2-uic form.ui -o ui_form.py
 from ui_koltsegvetes import Ui_Koltsegvetes
 from berkalkulatorwindow import Berkalkulator
-from classes.databases import CreateDatabase, CreateSubDatabase,  SubCategoryValueToDatabase, Query_Database, Query_Value_from_dasboard_in_Database, DeleteRow
+from classes.databases import CreateDatabase, CreateSubDatabase,  SubCategoryValueToDatabase, Query_Database, Query_Value_from_dasboard_in_Database, DeleteRow, DeleteAll
 
 
 
@@ -24,9 +24,7 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
         self.ui = Ui_Koltsegvetes()
         self.ui.setupUi(self)
         self.path = "koltsegvetes.db"
-        self.fokategoria = self.ui.fokategoria_comboBox.currentText()
-        self.alkategoria_combo = self.ui.alkategoria_comboBox.currentText()
-        self.month = self.ui.honap_comboBox.currentText()
+        
         
         
         
@@ -46,7 +44,7 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
         
         #Költségvetés tábla törlése
         self.ui.resetButton.clicked.connect(self.tabla_torlese)
-        
+        self.ui.delete_allButton.clicked.connect(self.osszes_adat_torlese)    
         
         
         
@@ -67,26 +65,34 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
         
         
     def felvitel(self):
-        
+        self.fokategoria = self.ui.fokategoria_comboBox.currentText()
         self.subcategory = self.ui.alkategoria_comboBox.currentText()
+        self.month = self.ui.honap_comboBox.currentText()
        
         cash = int(self.ui.add_subcategory_cash_LineEdit.text())
         print(self.subcategory)
         
         
         try:
-            SubCategoryValueToDatabase(path="koltsegvetes.db", table=self.fokategoria, subcategory=self.alkategoria_combo, month=self.month, values=cash)
+            SubCategoryValueToDatabase(path="koltsegvetes.db", table=self.fokategoria, subcategory=self.subcategory, month=self.month, values=cash)
             self.ui.textEdit.setText(f"Sikeres hozzáadva a(z) {self.subcategory} alkategóriához {cash}Ft összeg!" )
             self.ui.textEdit.setTextColor("green")
         except:
             ValueError(f"Hiba! {ValueError}")
             self.ui.textEdit.setText(f"Hiba! {ValueError}")
             self.ui.textEdit.setTextColor("red")
-        
+    
+    def osszes_adat_torlese(self):
+        path = "koltsegvetes.db"
+        table = self.ui.fokategoria_comboBox.currentText()
+        DeleteAll(path=path, table=table)
+    def tabla_torlese(self):
+        self.ui.KltsegvetesSubTablewiev.model().removeRows(0, self.ui.KltsegvetesSubTablewiev.model().rowCount())    
         
     def lekerdezes(self):
         self.tabla_torlese()
-        self.query = Query_Value_from_dasboard_in_Database(path="koltsegvetes.db", table=self.fokategoria)
+        self.table = self.ui.fokategoria_comboBox.currentText()
+        self.query = Query_Value_from_dasboard_in_Database(path="koltsegvetes.db", table=self.table)
         
         
         self.rowdata_import = self.query.get_value()
@@ -100,8 +106,7 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
             
         self.ui.KltsegvetesSubTablewiev.show()    
         
-    def tabla_torlese(self):
-        self.ui.KltsegvetesSubTablewiev.model().removeRows(0, self.ui.KltsegvetesSubTablewiev.model().rowCount())
+    
            
         
         
