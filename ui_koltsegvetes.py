@@ -16,14 +16,15 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
-    QLabel, QLineEdit, QPushButton, QSizePolicy,
-    QTextEdit, QVBoxLayout, QWidget)
+    QHeaderView, QLabel, QLineEdit, QPushButton,
+    QSizePolicy, QTableWidget, QTableWidgetItem, QTextEdit,
+    QVBoxLayout, QWidget)
 
 class Ui_Koltsegvetes(object):
     def setupUi(self, Koltsegvetes):
         if not Koltsegvetes.objectName():
             Koltsegvetes.setObjectName(u"Koltsegvetes")
-        Koltsegvetes.resize(912, 697)
+        Koltsegvetes.resize(1099, 697)
         Koltsegvetes.setStyleSheet(u"\n"
 "\n"
 "QFrame {\n"
@@ -217,8 +218,20 @@ class Ui_Koltsegvetes(object):
 
         self.frame_9 = QFrame(Koltsegvetes)
         self.frame_9.setObjectName(u"frame_9")
-        self.frame_9.setGeometry(QRect(570, 70, 331, 611))
-        self.frame_9.setStyleSheet(u"\n"
+        self.frame_9.setGeometry(QRect(750, 70, 331, 611))
+        self.frame_9.setStyleSheet(u"QPushButton {\n"
+"border-radius: 3px;\n"
+"                    font-size: 14px;\n"
+"                    font-weight: 500;\n"
+"                    line-height: 16px;\n"
+"                    padding: 2px 16px;\n"
+"                    height: 32px;\n"
+"                    min-width: 60px;\n"
+"                    min-height: 32px;\n"
+"                    border: none;\n"
+"                    color: #fff;\n"
+"                    background-color: #2251AA;\n"
+"                    }\n"
 "\n"
 "QLabel {\n"
 "background: none;\n"
@@ -234,125 +247,31 @@ class Ui_Koltsegvetes(object):
         self.label_12.setObjectName(u"label_12")
         self.label_12.setGeometry(QRect(80, 20, 191, 20))
         self.label_12.setStyleSheet(u"font-size: 18px")
-        self.frame_11 = QFrame(self.frame_9)
-        self.frame_11.setObjectName(u"frame_11")
-        self.frame_11.setGeometry(QRect(10, 50, 151, 551))
-        self.frame_11.setStyleSheet(u"QPushButton {\n"
-"border-radius: 3px;\n"
-"                    font-size: 14px;\n"
-"                    font-weight: 500;\n"
-"                    line-height: 16px;\n"
-"                    padding: 2px 16px;\n"
-"                    height: 32px;\n"
-"                    min-width: 60px;\n"
-"                    min-height: 32px;\n"
-"                    border: none;\n"
-"                    color: #fff;\n"
-"                    background-color: #2251AA;\n"
-"                    \n"
-"\n"
-"}")
-        self.frame_11.setFrameShape(QFrame.StyledPanel)
-        self.frame_11.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_3 = QVBoxLayout(self.frame_11)
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.autoButton = QPushButton(self.frame_11)
-        self.autoButton.setObjectName(u"autoButton")
-        self.autoButton.setStyleSheet(u"")
-
-        self.verticalLayout_3.addWidget(self.autoButton)
-
-        self.szorakozasButton = QPushButton(self.frame_11)
-        self.szorakozasButton.setObjectName(u"szorakozasButton")
-        self.szorakozasButton.setStyleSheet(u"")
-
-        self.verticalLayout_3.addWidget(self.szorakozasButton)
-
-        self.haztartasButton = QPushButton(self.frame_11)
-        self.haztartasButton.setObjectName(u"haztartasButton")
-        self.haztartasButton.setStyleSheet(u"")
-
-        self.verticalLayout_3.addWidget(self.haztartasButton)
-
-        self.hitelButton = QPushButton(self.frame_11)
-        self.hitelButton.setObjectName(u"hitelButton")
-        self.hitelButton.setStyleSheet(u"\n"
-"        border-radius: 3px;\n"
-"                    font-size: 14px;\n"
-"                    font-weight: 500;\n"
-"                    line-height: 16px;\n"
-"                    padding: 2px 16px;\n"
-"                    height: 32px;\n"
-"                    min-width: 60px;\n"
-"                    min-height: 32px;\n"
-"                    border: none;\n"
-"                    color: #fff;\n"
-"                    background-color: #2251AA;\n"
-"                    ")
-
-        self.verticalLayout_3.addWidget(self.hitelButton)
-
-        self.egeszegugyButton = QPushButton(self.frame_11)
-        self.egeszegugyButton.setObjectName(u"egeszegugyButton")
-        self.egeszegugyButton.setStyleSheet(u"")
-
-        self.verticalLayout_3.addWidget(self.egeszegugyButton)
-
-        self.frame_12 = QFrame(self.frame_9)
-        self.frame_12.setObjectName(u"frame_12")
-        self.frame_12.setGeometry(QRect(170, 50, 151, 551))
-        self.frame_12.setStyleSheet(u"QPushButton {\n"
-"border-radius: 3px;\n"
-"                    font-size: 14px;\n"
-"                    font-weight: 500;\n"
-"                    line-height: 16px;\n"
-"                    padding: 2px 16px;\n"
-"                    height: 32px;\n"
-"                    min-width: 60px;\n"
-"                    min-height: 32px;\n"
-"                    border: none;\n"
-"                    color: #fff;\n"
-"                    background-color: #2251AA;\n"
-"                    \n"
-"\n"
-"}")
-        self.frame_12.setFrameShape(QFrame.StyledPanel)
-        self.frame_12.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_4 = QVBoxLayout(self.frame_12)
-        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.digRezsiButton = QPushButton(self.frame_12)
-        self.digRezsiButton.setObjectName(u"digRezsiButton")
-        self.digRezsiButton.setStyleSheet(u"")
-
-        self.verticalLayout_4.addWidget(self.digRezsiButton)
-
-        self.megtakaritasButton = QPushButton(self.frame_12)
-        self.megtakaritasButton.setObjectName(u"megtakaritasButton")
-        self.megtakaritasButton.setStyleSheet(u"")
-
-        self.verticalLayout_4.addWidget(self.megtakaritasButton)
-
-        self.rezsiButton = QPushButton(self.frame_12)
-        self.rezsiButton.setObjectName(u"rezsiButton")
-        self.rezsiButton.setStyleSheet(u"")
-
-        self.verticalLayout_4.addWidget(self.rezsiButton)
-
-        self.mamaButton = QPushButton(self.frame_12)
-        self.mamaButton.setObjectName(u"mamaButton")
-        self.mamaButton.setStyleSheet(u"")
-
-        self.verticalLayout_4.addWidget(self.mamaButton)
-
-        self.egyebButton = QPushButton(self.frame_12)
-        self.egyebButton.setObjectName(u"egyebButton")
-        self.egyebButton.setStyleSheet(u"")
-
-        self.verticalLayout_4.addWidget(self.egyebButton)
-
+        self.KltsegvetesSubTablewiev = QTableWidget(self.frame_9)
+        if (self.KltsegvetesSubTablewiev.columnCount() < 3):
+            self.KltsegvetesSubTablewiev.setColumnCount(3)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.KltsegvetesSubTablewiev.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.KltsegvetesSubTablewiev.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.KltsegvetesSubTablewiev.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        self.KltsegvetesSubTablewiev.setObjectName(u"KltsegvetesSubTablewiev")
+        self.KltsegvetesSubTablewiev.setGeometry(QRect(10, 60, 311, 391))
+        self.KltsegvetesSubTablewiev.setStyleSheet(u"color: #000000")
+        self.lekerdezesButton = QPushButton(self.frame_9)
+        self.lekerdezesButton.setObjectName(u"lekerdezesButton")
+        self.lekerdezesButton.setGeometry(QRect(20, 560, 121, 36))
+        self.sorTorleseButton = QPushButton(self.frame_9)
+        self.sorTorleseButton.setObjectName(u"sorTorleseButton")
+        self.sorTorleseButton.setGeometry(QRect(220, 560, 100, 36))
+        self.resetButton = QPushButton(self.frame_9)
+        self.resetButton.setObjectName(u"resetButton")
+        self.resetButton.setGeometry(QRect(130, 500, 100, 36))
+        self.resetButton.setStyleSheet(u"background-color: #ff6b6b")
         self.frame_10 = QFrame(Koltsegvetes)
         self.frame_10.setObjectName(u"frame_10")
-        self.frame_10.setGeometry(QRect(10, 420, 551, 261))
+        self.frame_10.setGeometry(QRect(10, 420, 731, 261))
         self.frame_10.setStyleSheet(u"QLineEdit{\n"
 "\n"
 "background-color: rgba(206, 194, 136, 0.5);\n"
@@ -380,28 +299,29 @@ class Ui_Koltsegvetes(object):
         self.fokategoria_comboBox.addItem("")
         self.fokategoria_comboBox.addItem("")
         self.fokategoria_comboBox.setObjectName(u"fokategoria_comboBox")
-        self.fokategoria_comboBox.setGeometry(QRect(130, 20, 103, 32))
+        self.fokategoria_comboBox.setGeometry(QRect(300, 10, 151, 32))
         self.label_13 = QLabel(self.frame_10)
         self.label_13.setObjectName(u"label_13")
-        self.label_13.setGeometry(QRect(30, 30, 81, 16))
+        self.label_13.setGeometry(QRect(210, 20, 81, 16))
         self.label_14 = QLabel(self.frame_10)
         self.label_14.setObjectName(u"label_14")
-        self.label_14.setGeometry(QRect(260, 30, 81, 16))
+        self.label_14.setGeometry(QRect(460, 20, 81, 16))
         self.alkategoria_comboBox = QComboBox(self.frame_10)
         self.alkategoria_comboBox.setObjectName(u"alkategoria_comboBox")
-        self.alkategoria_comboBox.setGeometry(QRect(360, 20, 103, 32))
+        self.alkategoria_comboBox.setGeometry(QRect(540, 10, 171, 32))
         self.textEdit = QTextEdit(self.frame_10)
         self.textEdit.setObjectName(u"textEdit")
         self.textEdit.setGeometry(QRect(20, 120, 511, 131))
         self.label_15 = QLabel(self.frame_10)
         self.label_15.setObjectName(u"label_15")
         self.label_15.setGeometry(QRect(40, 70, 58, 16))
-        self.lineEdit_11 = QLineEdit(self.frame_10)
-        self.lineEdit_11.setObjectName(u"lineEdit_11")
-        self.lineEdit_11.setGeometry(QRect(130, 70, 151, 21))
+        self.add_subcategory_cash_LineEdit = QLineEdit(self.frame_10)
+        self.add_subcategory_cash_LineEdit.setObjectName(u"add_subcategory_cash_LineEdit")
+        self.add_subcategory_cash_LineEdit.setGeometry(QRect(130, 70, 151, 21))
+        self.add_subcategory_cash_LineEdit.setStyleSheet(u"color: #000000")
         self.felvitelButton = QPushButton(self.frame_10)
         self.felvitelButton.setObjectName(u"felvitelButton")
-        self.felvitelButton.setGeometry(QRect(350, 70, 100, 36))
+        self.felvitelButton.setGeometry(QRect(480, 60, 100, 36))
         self.felvitelButton.setStyleSheet(u"   border-radius: 3px;\n"
 "                    font-size: 14px;\n"
 "                    font-weight: 500;\n"
@@ -414,6 +334,38 @@ class Ui_Koltsegvetes(object):
 "                    color: #fff;\n"
 "                    background-color: #2251AA;\n"
 "                    ")
+        self.createTableButton = QPushButton(self.frame_10)
+        self.createTableButton.setObjectName(u"createTableButton")
+        self.createTableButton.setGeometry(QRect(590, 60, 121, 36))
+        self.createTableButton.setStyleSheet(u"   border-radius: 3px;\n"
+"                    font-size: 14px;\n"
+"                    font-weight: 500;\n"
+"                    line-height: 16px;\n"
+"                    padding: 2px 16px;\n"
+"                    height: 32px;\n"
+"                    min-width: 60px;\n"
+"                    min-height: 32px;\n"
+"                    border: none;\n"
+"                    color: #fff;\n"
+"                    background-color: #2251AA;")
+        self.label_16 = QLabel(self.frame_10)
+        self.label_16.setObjectName(u"label_16")
+        self.label_16.setGeometry(QRect(20, 20, 51, 16))
+        self.honap_comboBox = QComboBox(self.frame_10)
+        self.honap_comboBox.addItem("")
+        self.honap_comboBox.addItem("")
+        self.honap_comboBox.addItem("")
+        self.honap_comboBox.addItem("")
+        self.honap_comboBox.addItem("")
+        self.honap_comboBox.addItem("")
+        self.honap_comboBox.addItem("")
+        self.honap_comboBox.addItem("")
+        self.honap_comboBox.addItem("")
+        self.honap_comboBox.addItem("")
+        self.honap_comboBox.addItem("")
+        self.honap_comboBox.addItem("")
+        self.honap_comboBox.setObjectName(u"honap_comboBox")
+        self.honap_comboBox.setGeometry(QRect(90, 10, 103, 32))
         self.frame_3 = QFrame(Koltsegvetes)
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setGeometry(QRect(20, 70, 265, 341))
@@ -545,23 +497,22 @@ class Ui_Koltsegvetes(object):
         self.label_5.setText(QCoreApplication.translate("Koltsegvetes", u"Hitel", None))
         self.label_6.setText(QCoreApplication.translate("Koltsegvetes", u"Eg\u00e9szs\u00e9g\u00fcgy", None))
         self.label_12.setText(QCoreApplication.translate("Koltsegvetes", u"R\u00e9szletes k\u00f6lts\u00e9gvet\u00e9s", None))
-        self.autoButton.setText(QCoreApplication.translate("Koltsegvetes", u"Aut\u00f3", None))
-        self.szorakozasButton.setText(QCoreApplication.translate("Koltsegvetes", u"Sz\u00f3rakoz\u00e1s", None))
-        self.haztartasButton.setText(QCoreApplication.translate("Koltsegvetes", u"H\u00e1ztart\u00e1s", None))
-        self.hitelButton.setText(QCoreApplication.translate("Koltsegvetes", u"Hitel", None))
-        self.egeszegugyButton.setText(QCoreApplication.translate("Koltsegvetes", u"Eg\u00e9szs\u00e9g\u00fcgy", None))
-        self.digRezsiButton.setText(QCoreApplication.translate("Koltsegvetes", u"Digit\u00e1lis Rezsi", None))
-        self.megtakaritasButton.setText(QCoreApplication.translate("Koltsegvetes", u"Megtakar\u00edt\u00e1s", None))
-        self.rezsiButton.setText(QCoreApplication.translate("Koltsegvetes", u"Rezsi", None))
-        self.mamaButton.setText(QCoreApplication.translate("Koltsegvetes", u"Mama", None))
-        self.egyebButton.setText(QCoreApplication.translate("Koltsegvetes", u"Egy\u00e9b", None))
+        ___qtablewidgetitem = self.KltsegvetesSubTablewiev.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("Koltsegvetes", u"D\u00e1tum", None));
+        ___qtablewidgetitem1 = self.KltsegvetesSubTablewiev.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("Koltsegvetes", u"H\u00f3nap", None));
+        ___qtablewidgetitem2 = self.KltsegvetesSubTablewiev.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("Koltsegvetes", u"\u00d6sszeg", None));
+        self.lekerdezesButton.setText(QCoreApplication.translate("Koltsegvetes", u"Lek\u00e9rdez\u00e9s", None))
+        self.sorTorleseButton.setText(QCoreApplication.translate("Koltsegvetes", u"Sor t\u00f6rl\u00e9se", None))
+        self.resetButton.setText(QCoreApplication.translate("Koltsegvetes", u"RESET", None))
         self.fokategoria_comboBox.setItemText(0, QCoreApplication.translate("Koltsegvetes", u"Aut\u00f3", None))
         self.fokategoria_comboBox.setItemText(1, QCoreApplication.translate("Koltsegvetes", u"Sz\u00f3rakoz\u00e1s", None))
         self.fokategoria_comboBox.setItemText(2, QCoreApplication.translate("Koltsegvetes", u"H\u00e1ztart\u00e1s", None))
         self.fokategoria_comboBox.setItemText(3, QCoreApplication.translate("Koltsegvetes", u"Hitel", None))
         self.fokategoria_comboBox.setItemText(4, QCoreApplication.translate("Koltsegvetes", u"Eg\u00e9szs\u00e9g\u00fcgy", None))
         self.fokategoria_comboBox.setItemText(5, QCoreApplication.translate("Koltsegvetes", u"Rezsi", None))
-        self.fokategoria_comboBox.setItemText(6, QCoreApplication.translate("Koltsegvetes", u"Digit\u00e1lis Rezsi", None))
+        self.fokategoria_comboBox.setItemText(6, QCoreApplication.translate("Koltsegvetes", u"Digit\u00e1lisRezsi", None))
         self.fokategoria_comboBox.setItemText(7, QCoreApplication.translate("Koltsegvetes", u"Mama", None))
         self.fokategoria_comboBox.setItemText(8, QCoreApplication.translate("Koltsegvetes", u"Megtakar\u00edt\u00e1s", None))
         self.fokategoria_comboBox.setItemText(9, QCoreApplication.translate("Koltsegvetes", u"Egy\u00e9b", None))
@@ -570,6 +521,21 @@ class Ui_Koltsegvetes(object):
         self.label_14.setText(QCoreApplication.translate("Koltsegvetes", u"Alkaterg\u00f3ria", None))
         self.label_15.setText(QCoreApplication.translate("Koltsegvetes", u"\u00d6sszeg", None))
         self.felvitelButton.setText(QCoreApplication.translate("Koltsegvetes", u"Felvitel", None))
+        self.createTableButton.setText(QCoreApplication.translate("Koltsegvetes", u"T\u00e1bla", None))
+        self.label_16.setText(QCoreApplication.translate("Koltsegvetes", u"H\u00f3nap", None))
+        self.honap_comboBox.setItemText(0, QCoreApplication.translate("Koltsegvetes", u"Janu\u00e1r", None))
+        self.honap_comboBox.setItemText(1, QCoreApplication.translate("Koltsegvetes", u"Febru\u00e1r", None))
+        self.honap_comboBox.setItemText(2, QCoreApplication.translate("Koltsegvetes", u"M\u00e1rcius", None))
+        self.honap_comboBox.setItemText(3, QCoreApplication.translate("Koltsegvetes", u"\u00c1prilis", None))
+        self.honap_comboBox.setItemText(4, QCoreApplication.translate("Koltsegvetes", u"M\u00e1jus", None))
+        self.honap_comboBox.setItemText(5, QCoreApplication.translate("Koltsegvetes", u"J\u00fanius", None))
+        self.honap_comboBox.setItemText(6, QCoreApplication.translate("Koltsegvetes", u"J\u00falius", None))
+        self.honap_comboBox.setItemText(7, QCoreApplication.translate("Koltsegvetes", u"Augusztus", None))
+        self.honap_comboBox.setItemText(8, QCoreApplication.translate("Koltsegvetes", u"Szeptember", None))
+        self.honap_comboBox.setItemText(9, QCoreApplication.translate("Koltsegvetes", u"Okt\u00f3ber", None))
+        self.honap_comboBox.setItemText(10, QCoreApplication.translate("Koltsegvetes", u"November", None))
+        self.honap_comboBox.setItemText(11, QCoreApplication.translate("Koltsegvetes", u"December", None))
+
         self.label_7.setText(QCoreApplication.translate("Koltsegvetes", u"Rezsi", None))
         self.label_8.setText(QCoreApplication.translate("Koltsegvetes", u"Digit\u00e1lis Rezsi", None))
         self.label_9.setText(QCoreApplication.translate("Koltsegvetes", u"Mama", None))
