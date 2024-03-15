@@ -47,8 +47,34 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
         self.ui.delete_allButton.clicked.connect(self.osszes_adat_torlese) 
         
         #QlineEditek feltöltése
-        self.ui.sumButton.clicked.connect(self.add_values)
+        self.ui.sumButton.clicked.connect(self.add_values_edit)
+    
+    def add_values_edit(self):
+        self.path = "koltsegvetes.db"
+        self.table = self.ui.fokategoria_comboBox.currentText()  
+        sum = CalculateSum(path=self.path, table=self.table)
         
+        if self.table == "Autó":
+            self.ui.lineEdit.setText(str(sum.get_szum()))
+        elif self.table == "Szórakozás":
+            self.ui.szorakozasLineEdit.setText(str(sum.get_szum()))
+        elif self.table == "Háztartás":
+            self.ui.haztartasLineEdit.setText(str(sum.get_szum()))
+        elif self.table == "Hitel":
+            self.ui.hitelLineEdit.setText(str(sum.get_szum()))
+        elif self.table == "Egészségügy":
+            self.ui.egeszsegugyLineEdit.setText(str(sum.get_szum()))
+        elif self.table == "Rezsi":
+            self.ui.rezsiLineEdit.setText(str(sum.get_szum()))
+        elif self.table == "Digitális Rezsi":
+            self.ui.digitallisRezsiLineEdit.setText(str(sum.get_szum()))
+        elif self.table == "Mama":
+            self.ui.mamaLineEdit.setText(str(sum.get_szum()))
+        elif self.table == "Megtakarítás":
+            self.ui.magtakaritasLineEdit.setText(str(sum.get_szum()))
+        elif self.table == "Egyéb":
+            self.ui.egyebLineEdit.setText(str(sum.get_szum()))
+            
            
     def add_values(self):
         self.path = "koltsegvetes.db"
@@ -125,9 +151,13 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
         self.ui.KltsegvetesSubTablewiev.show()    
         
     
-           
+    def set_lineedit(self):
+        self.query = Query_Value_from_dasboard_in_Database(path="koltsegvetes.db", table="Költségvetés")      
         
+        self.value = self.query.get_value()
+        print(self.value) 
         
+      
     def alkategoria(self):
         self.ui.alkategoria_comboBox.clear()
         if self.ui.fokategoria_comboBox.currentText() == "Autó":
@@ -148,8 +178,8 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
             self.ui.alkategoria_comboBox.addItems(["Mama"])  
         elif self.ui.fokategoria_comboBox.currentText() == "Megtakarítás":
             self.ui.alkategoria_comboBox.addItems(["Állampapír", "TBSZ", "Oktatás"]) 
-        elif self.ui.fokategoria_comboBox.currentText() == "Egyeb":
-            self.ui.alkategoria_comboBox.addItems(["Egyeb", ])                      
+        elif self.ui.fokategoria_comboBox.currentText() == "Egyéb":
+            self.ui.alkategoria_comboBox.addItems(["Egyéb"])                     
                 
     
     def berkalkulator(self):

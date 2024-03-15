@@ -284,3 +284,13 @@ class AddSumValueToDatabase:
 
 CreateDatabase(path="koltsegvetes.db" , table="Költségvetés")  
 AddSumValueToDatabase(path="koltsegvetes.db", table="Költségvetés", values=5000, category="Autó")     
+
+def set_lineedit():
+    query = Query_Value_from_dasboard_in_Database(path="koltsegvetes.db", table="Költségvetés")      
+    
+    value = query.get_value()
+
+    for row in value:
+        print(row)
+ 
+set_lineedit()        
