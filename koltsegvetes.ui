@@ -416,13 +416,26 @@ border-radius:20px;</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>500</y>
+      <y>460</y>
       <width>121</width>
       <height>36</height>
      </rect>
     </property>
     <property name="text">
      <string>összesítés</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="veglegesitButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>510</y>
+      <width>121</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Véglegesít</string>
     </property>
    </widget>
   </widget>

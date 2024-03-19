@@ -14,7 +14,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow
 #     pyside2-uic form.ui -o ui_form.py
 from ui_koltsegvetes import Ui_Koltsegvetes
 from berkalkulatorwindow import Berkalkulator
-from classes.databases import CreateDatabase, CreateSubDatabase,  SubCategoryValueToDatabase, Query_Database, Query_Value_from_dasboard_in_Database, DeleteRow, DeleteAll, CalculateSum, AddSumValueToDatabase
+from classes.databases import CreateDatabase, CreateSubDatabase,  SubCategoryValueToDatabase, Query_Database, Query_Value_from_dasboard_in_Database, DeleteRow, DeleteAll, CalculateSum, AddSumValueToDatabase, PushValueToMainDatabase
 
 
 
@@ -47,7 +47,9 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
         self.ui.delete_allButton.clicked.connect(self.osszes_adat_torlese) 
         
         #QlineEditek feltöltése
-        self.ui.sumButton.clicked.connect(self.add_values_edit)
+        self.ui.sumButton.clicked.connect(self.line_edit_feltoltes)
+        self.ui.sumButton.clicked.connect(self.szummal)
+        self.ui.veglegesitButton.clicked.connect(self.koltsegvetes_feltoltese)
     
     def add_values_edit(self):
         self.path = "koltsegvetes.db"
@@ -66,8 +68,8 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
             self.ui.egeszsegugyLineEdit.setText(str(sum.get_szum()))
         elif self.table == "Rezsi":
             self.ui.rezsiLineEdit.setText(str(sum.get_szum()))
-        elif self.table == "Digitális Rezsi":
-            self.ui.digitallisRezsiLineEdit.setText(str(sum.get_szum()))
+        elif self.table == "DigitálisRezsi":
+            self.ui.digitrezsLineEdit.setText(str(sum.get_szum()))
         elif self.table == "Mama":
             self.ui.mamaLineEdit.setText(str(sum.get_szum()))
         elif self.table == "Megtakarítás":
@@ -82,7 +84,7 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
         
         self.query = CalculateSum(path=self.path, table=self.table).get_szum()
         cash = int(self.query)
-        print(cash)
+        
         
         try:
             AddSumValueToDatabase(path=self.path, table="Költségvetés", values=cash, category=self.table)
@@ -103,9 +105,46 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
             self.ui.textEdit.setText("Sikeres hozzáadás!")
         except:
             self.ui.textEdit.setText(f"Hiba! {ValueError}")       
+    
+    def value_from_database(self):
+        self.path = "koltsegvetes.db"
+        self.table = ["Autó", "Szórakozás", "Háztartás", "Hitel", "Egészségügy", "Rezsi", "DigitálisRezsi", "Mama", "Megtakarítás", "Egyéb"]
         
+        table = []
+        
+        for t in self.table:
+            table.append(CalculateSum(path=self.path, table=t).get_szum())
+        
+        return table      
             
+    def line_edit_feltoltes(self):
         
+        table = self.value_from_database()
+        
+        self.ui.lineEdit.setText(str(table[0]))
+        self.ui.szorakozasLineEdit.setText(str(table[1]))
+        self.ui.haztartasLineEdit.setText(str(table[2]))
+        self.ui.hitelLineEdit.setText(str(table[3]))
+        self.ui.egeszsegugyLineEdit.setText(str(table[4]))
+        self.ui.rezsiLineEdit.setText(str(table[5]))
+        self.ui.digitrezsLineEdit.setText(str(table[6]))
+        self.ui.mamaLineEdit.setText(str(table[7]))
+        self.ui.magtakaritasLineEdit.setText(str(table[8]))
+        self.ui.egyebLineEdit.setText(str(table[9]))
+        
+    def szummal(self):
+        
+        value = self.value_from_database()
+        
+        sum_value = sum(value)
+        self.ui.textEdit.setText(f"A Költségvetés teljes összege: {sum_value}Ft")
+        
+        
+    
+     
+        
+             
+            
         
         
     def felvitel(self):
@@ -114,7 +153,7 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
         self.month = self.ui.honap_comboBox.currentText()
        
         cash = int(self.ui.add_subcategory_cash_LineEdit.text())
-        print(self.subcategory)
+        
         
         
         try:
@@ -155,7 +194,7 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
         self.query = Query_Value_from_dasboard_in_Database(path="koltsegvetes.db", table="Költségvetés")      
         
         self.value = self.query.get_value()
-        print(self.value) 
+     
         
       
     def alkategoria(self):
@@ -172,7 +211,7 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
             self.ui.alkategoria_comboBox.addItems(["Orvos", "Gyógyszer" ]) 
         elif self.ui.fokategoria_comboBox.currentText() == "Rezsi":
             self.ui.alkategoria_comboBox.addItems(["Víz", "Gáz", "Telefon", "Szemét", "TV/internet"])
-        elif self.ui.fokategoria_comboBox.currentText() == "Digitális Rezsi":
+        elif self.ui.fokategoria_comboBox.currentText() == "DigitálisRezsi":
             self.ui.alkategoria_comboBox.addItems(["HBO Max", "AppleOne", "Netflix","Disney+", "Skyshowtime", "YoutubePrémium"]) 
         elif self.ui.fokategoria_comboBox.currentText() == "Mama":
             self.ui.alkategoria_comboBox.addItems(["Mama"])  
@@ -215,11 +254,24 @@ class KoltsegvetesMainWindow(QtWidgets.QWidget):
                 
     def sor_torlese(self):
         row = self.ui.KltsegvetesSubTablewiev.currentIndex().row() + 1
-        print(row)
         DeleteRow(path=self.path, table=self.fokategoria, row=row)
         
           
+    def koltsegvetes_feltoltese(self):
+        honap = self.ui.honap_comboBox.currentText()
+        auto = self.ui.lineEdit.text()
+        szorakozas = self.ui.szorakozasLineEdit.text()
+        haztartas = self.ui.haztartasLineEdit.text()
+        hitel = self.ui.hitelLineEdit.text()
+        egeszsegugy = self.ui.egeszsegugyLineEdit.text()
+        rezsi = self.ui.rezsiLineEdit.text()
+        digitalis_rezsi = self.ui.digitrezsLineEdit.text()
+        mama = self.ui.mamaLineEdit.text()
+        megtakaritas = self.ui.magtakaritasLineEdit.text()
+        egyeb = self.ui.egyebLineEdit.text()
         
+        PushValueToMainDatabase(path="koltsegvetes.db", honap=honap, auto=auto, szorakozas=szorakozas, haztartas=haztartas, hitel=hitel, egeszsegugy=egeszsegugy, rezsi=rezsi, digitalrezsi=digitalis_rezsi, mama=mama, megtakaritas=megtakaritas, egyeb=egyeb)
+           
             
 
 if __name__ == "__main__":

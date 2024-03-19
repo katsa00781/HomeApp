@@ -14,6 +14,7 @@ class CreateDatabase:
         
             self.cursor.execute(
                 f"""CREATE TABLE IF NOT EXISTS {self.table}  (
+                Hónap TEXT,
                 Autó INTEGER, 
                 Szórakozás INTEGER, 
                 Háztartás INTEGER, 
@@ -32,6 +33,7 @@ class CreateDatabase:
         self.connection.commit()   
         self.connection.close()
 
+CreateDatabase("koltsegvetes.db", "Költségvetés")
 
 class CreateSubDatabase:
     def __init__(self, path, table):
@@ -256,11 +258,12 @@ class CalculateSum:
             f"SELECT SUM(összeg) FROM {self.table}"
         )   
         
-    def get_szum(self):
-        return self.cursor.fetchone()[0]
+        self.sum = self.cursor.fetchone()[0]
         
         self.connection.commit()
-        self.connection.close()        
+        self.connection.close() 
+    def get_szum(self):
+        return self.sum         
 
  
 
@@ -282,15 +285,77 @@ class AddSumValueToDatabase:
         self.connection.commit()
         self.connection.close()
 
-CreateDatabase(path="koltsegvetes.db" , table="Költségvetés")  
-AddSumValueToDatabase(path="koltsegvetes.db", table="Költségvetés", values=5000, category="Autó")     
+   
 
-def set_lineedit():
-    query = Query_Value_from_dasboard_in_Database(path="koltsegvetes.db", table="Költségvetés")      
-    
-    value = query.get_value()
+class PushValueToMainDatabase:
+    def __init__(self, path, honap,  auto, szorakozas, haztartas, hitel, egeszsegugy, rezsi, digitalrezsi, mama, megtakaritas, egyeb):
+        self.path = path
+        self.table = "Költségvetés"
+        self.honap = honap
+        self.auto = auto
+        self.szorakozas = szorakozas
+        self.haztartas = haztartas
+        self.hitel = hitel
+        self.egeszsegugy = egeszsegugy
+        self.rezsi = rezsi
+        self.digitalrezsi = digitalrezsi
+        self.mama = mama
+        self.megtakaritas = megtakaritas
+        self.egyeb = egyeb
+        
+        
+        self.connection = sqlite3.connect(self.path)
+        self.cursor = self.connection.cursor()
+        
+        self.cursor.execute(
+            f"""INSERT INTO {self.table} ({self.category} ) VALUES (
+                :Hónap,
+                :Autó,
+                :Szórakozás,
+                :Háztartás,
+                :Hitel,
+                :Egészségügy,
+                :Rezsi,
+                :DigitálisRezsi,
+                :Mama,
+                :Megtakarítás,
+                Egyeb
+                )""",
+            {
+                "Hónap": self.honap,
+                "Autó": self.auto,
+                "Szórakozás": self.szorakozas,
+                "Háztartás": self.haztartas,
+                "Hitel": self.hitel,
+                "Egészségügy": self.egeszsegugy,
+                "Rezsi": self.rezsi,
+                "Digitális Rezsi": self.digitalrezsi,
+                "Mama": self.mama,
+                "Megtakarítás": self.megtakaritas,
+                "Egyeb": self.egyeb
+            }
+        )     
+        
+        self.connection.commit()
+        self.connection.close()       
 
-    for row in value:
-        print(row)
  
-set_lineedit()        
+
+def closeDatabase():
+    path = "koltsegvetes.db"
+    table = "DigitalisRezsi"
+    
+    try:
+        conn = sqlite3.connect(path)
+        c = conn.cursor()
+    
+        conn.commit()
+        conn.close()
+        print("Lezárva!")
+    except:
+        print("Hiba!")    
+    
+    
+    
+   
+         
