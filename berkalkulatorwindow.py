@@ -17,6 +17,7 @@ class Berkalkulator(QtWidgets.QWidget):
         self.ui = Ui_Berkalkulator()
         self.ui.setupUi(self)
         
+    
         
 
 if __name__ == "__main__":

@@ -23,7 +23,7 @@ class Ui_Berkalkulator(object):
     def setupUi(self, Berkalkulator):
         if not Berkalkulator.objectName():
             Berkalkulator.setObjectName(u"Berkalkulator")
-        Berkalkulator.resize(1046, 695)
+        Berkalkulator.resize(896, 695)
         Berkalkulator.setStyleSheet(u"\n"
 "background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1,\n"
 "                                      stop: 0 #FFE381, stop: 1 #A1B0BA);")
@@ -59,14 +59,14 @@ class Ui_Berkalkulator(object):
         self.frame.setFrameShadow(QFrame.Raised)
         self.dataFrame = QFrame(self.frame)
         self.dataFrame.setObjectName(u"dataFrame")
-        self.dataFrame.setGeometry(QRect(20, 10, 991, 71))
+        self.dataFrame.setGeometry(QRect(20, 10, 851, 71))
         self.dataFrame.setStyleSheet(u"color:#8D3D3D;\n"
 "background: none")
         self.dataFrame.setFrameShape(QFrame.StyledPanel)
         self.dataFrame.setFrameShadow(QFrame.Raised)
         self.tableWidget = QTableWidget(self.dataFrame)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(10, 0, 971, 61))
+        self.tableWidget.setGeometry(QRect(10, 10, 831, 61))
         self.tableWidget.setStyleSheet(u"QFrame{\n"
 "background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1,\n"
 "                                      stop: 0 #FFE381, stop: 1 #A1B0BA);\n"
@@ -75,7 +75,7 @@ class Ui_Berkalkulator(object):
 "")
         self.munkaidodataFrame = QFrame(self.frame)
         self.munkaidodataFrame.setObjectName(u"munkaidodataFrame")
-        self.munkaidodataFrame.setGeometry(QRect(650, 100, 351, 291))
+        self.munkaidodataFrame.setGeometry(QRect(650, 100, 221, 291))
         self.munkaidodataFrame.setStyleSheet(u"QLineEdit{\n"
 "\n"
 "background-color: rgba(206, 194, 136, 0.5);\n"
@@ -89,7 +89,7 @@ class Ui_Berkalkulator(object):
         self.munkaidodataFrame.setFrameShadow(QFrame.Raised)
         self.frame_18 = QFrame(self.munkaidodataFrame)
         self.frame_18.setObjectName(u"frame_18")
-        self.frame_18.setGeometry(QRect(10, 10, 263, 44))
+        self.frame_18.setGeometry(QRect(10, 10, 191, 44))
         self.frame_18.setFrameShape(QFrame.StyledPanel)
         self.frame_18.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_15 = QHBoxLayout(self.frame_18)
@@ -99,14 +99,14 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_15.addWidget(self.label_15)
 
-        self.lineEdit_15 = QLineEdit(self.frame_18)
-        self.lineEdit_15.setObjectName(u"lineEdit_15")
+        self.ledolgozottNapokLineEdit = QLineEdit(self.frame_18)
+        self.ledolgozottNapokLineEdit.setObjectName(u"ledolgozottNapokLineEdit")
 
-        self.horizontalLayout_15.addWidget(self.lineEdit_15)
+        self.horizontalLayout_15.addWidget(self.ledolgozottNapokLineEdit)
 
         self.frame_20 = QFrame(self.munkaidodataFrame)
         self.frame_20.setObjectName(u"frame_20")
-        self.frame_20.setGeometry(QRect(20, 70, 263, 44))
+        self.frame_20.setGeometry(QRect(20, 70, 181, 44))
         self.frame_20.setFrameShape(QFrame.StyledPanel)
         self.frame_20.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_17 = QHBoxLayout(self.frame_20)
@@ -116,14 +116,14 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_17.addWidget(self.label_17)
 
-        self.lineEdit_17 = QLineEdit(self.frame_20)
-        self.lineEdit_17.setObjectName(u"lineEdit_17")
+        self.SzabadsagLineEdit = QLineEdit(self.frame_20)
+        self.SzabadsagLineEdit.setObjectName(u"SzabadsagLineEdit")
 
-        self.horizontalLayout_17.addWidget(self.lineEdit_17)
+        self.horizontalLayout_17.addWidget(self.SzabadsagLineEdit)
 
         self.frame_19 = QFrame(self.munkaidodataFrame)
         self.frame_19.setObjectName(u"frame_19")
-        self.frame_19.setGeometry(QRect(20, 120, 263, 44))
+        self.frame_19.setGeometry(QRect(20, 120, 181, 44))
         self.frame_19.setFrameShape(QFrame.StyledPanel)
         self.frame_19.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_16 = QHBoxLayout(self.frame_19)
@@ -133,14 +133,14 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_16.addWidget(self.label_16)
 
-        self.lineEdit_16 = QLineEdit(self.frame_19)
-        self.lineEdit_16.setObjectName(u"lineEdit_16")
+        self.munkaszunetiLineEdit = QLineEdit(self.frame_19)
+        self.munkaszunetiLineEdit.setObjectName(u"munkaszunetiLineEdit")
 
-        self.horizontalLayout_16.addWidget(self.lineEdit_16)
+        self.horizontalLayout_16.addWidget(self.munkaszunetiLineEdit)
 
         self.frame_21 = QFrame(self.munkaidodataFrame)
         self.frame_21.setObjectName(u"frame_21")
-        self.frame_21.setGeometry(QRect(20, 170, 263, 44))
+        self.frame_21.setGeometry(QRect(20, 170, 181, 44))
         self.frame_21.setFrameShape(QFrame.StyledPanel)
         self.frame_21.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_18 = QHBoxLayout(self.frame_21)
@@ -150,10 +150,10 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_18.addWidget(self.label_18)
 
-        self.lineEdit_18 = QLineEdit(self.frame_21)
-        self.lineEdit_18.setObjectName(u"lineEdit_18")
+        self.tuloraLineEdit_2 = QLineEdit(self.frame_21)
+        self.tuloraLineEdit_2.setObjectName(u"tuloraLineEdit_2")
 
-        self.horizontalLayout_18.addWidget(self.lineEdit_18)
+        self.horizontalLayout_18.addWidget(self.tuloraLineEdit_2)
 
         self.frame_2 = QFrame(self.frame)
         self.frame_2.setObjectName(u"frame_2")
@@ -185,10 +185,13 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout.addWidget(self.label)
 
-        self.lineEdit = QLineEdit(self.frame_3)
-        self.lineEdit.setObjectName(u"lineEdit")
+        self.alabberLineEdit = QLineEdit(self.frame_3)
+        self.alabberLineEdit.setObjectName(u"alabberLineEdit")
+        font = QFont()
+        font.setFamilies([u"Academy Engraved LET"])
+        self.alabberLineEdit.setFont(font)
 
-        self.horizontalLayout.addWidget(self.lineEdit)
+        self.horizontalLayout.addWidget(self.alabberLineEdit)
 
 
         self.verticalLayout.addWidget(self.frame_3)
@@ -204,10 +207,10 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_2.addWidget(self.label_2)
 
-        self.lineEdit_2 = QLineEdit(self.frame_4)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.haiberesidoberLineEdit = QLineEdit(self.frame_4)
+        self.haiberesidoberLineEdit.setObjectName(u"haiberesidoberLineEdit")
 
-        self.horizontalLayout_2.addWidget(self.lineEdit_2)
+        self.horizontalLayout_2.addWidget(self.haiberesidoberLineEdit)
 
 
         self.verticalLayout.addWidget(self.frame_4)
@@ -223,10 +226,10 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_3.addWidget(self.label_3)
 
-        self.lineEdit_3 = QLineEdit(self.frame_5)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.tuloraAlapLineEdit = QLineEdit(self.frame_5)
+        self.tuloraAlapLineEdit.setObjectName(u"tuloraAlapLineEdit")
 
-        self.horizontalLayout_3.addWidget(self.lineEdit_3)
+        self.horizontalLayout_3.addWidget(self.tuloraAlapLineEdit)
 
 
         self.verticalLayout.addWidget(self.frame_5)
@@ -242,10 +245,10 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_4.addWidget(self.label_4)
 
-        self.lineEdit_4 = QLineEdit(self.frame_6)
-        self.lineEdit_4.setObjectName(u"lineEdit_4")
+        self.fizetettSzLineEdit = QLineEdit(self.frame_6)
+        self.fizetettSzLineEdit.setObjectName(u"fizetettSzLineEdit")
 
-        self.horizontalLayout_4.addWidget(self.lineEdit_4)
+        self.horizontalLayout_4.addWidget(self.fizetettSzLineEdit)
 
 
         self.verticalLayout.addWidget(self.frame_6)
@@ -261,10 +264,10 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_5.addWidget(self.label_5)
 
-        self.lineEdit_5 = QLineEdit(self.frame_7)
-        self.lineEdit_5.setObjectName(u"lineEdit_5")
+        self.munkaszuntimvLineEdit = QLineEdit(self.frame_7)
+        self.munkaszuntimvLineEdit.setObjectName(u"munkaszuntimvLineEdit")
 
-        self.horizontalLayout_5.addWidget(self.lineEdit_5)
+        self.horizontalLayout_5.addWidget(self.munkaszuntimvLineEdit)
 
 
         self.verticalLayout.addWidget(self.frame_7)
@@ -280,10 +283,10 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_6.addWidget(self.label_6)
 
-        self.lineEdit_6 = QLineEdit(self.frame_8)
-        self.lineEdit_6.setObjectName(u"lineEdit_6")
+        self.mpotlekLineEdit = QLineEdit(self.frame_8)
+        self.mpotlekLineEdit.setObjectName(u"mpotlekLineEdit")
 
-        self.horizontalLayout_6.addWidget(self.lineEdit_6)
+        self.horizontalLayout_6.addWidget(self.mpotlekLineEdit)
 
 
         self.verticalLayout.addWidget(self.frame_8)
@@ -299,75 +302,18 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_7.addWidget(self.label_7)
 
-        self.lineEdit_7 = QLineEdit(self.frame_9)
-        self.lineEdit_7.setObjectName(u"lineEdit_7")
+        self.terLineEdit = QLineEdit(self.frame_9)
+        self.terLineEdit.setObjectName(u"terLineEdit")
 
-        self.horizontalLayout_7.addWidget(self.lineEdit_7)
+        self.horizontalLayout_7.addWidget(self.terLineEdit)
 
 
         self.verticalLayout.addWidget(self.frame_9)
 
-        self.frame_11 = QFrame(self.frame_2)
-        self.frame_11.setObjectName(u"frame_11")
-        self.frame_11.setFrameShape(QFrame.StyledPanel)
-        self.frame_11.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_9 = QHBoxLayout(self.frame_11)
-        self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
-        self.label_9 = QLabel(self.frame_11)
-        self.label_9.setObjectName(u"label_9")
-
-        self.horizontalLayout_9.addWidget(self.label_9)
-
-        self.lineEdit_9 = QLineEdit(self.frame_11)
-        self.lineEdit_9.setObjectName(u"lineEdit_9")
-
-        self.horizontalLayout_9.addWidget(self.lineEdit_9)
-
-
-        self.verticalLayout.addWidget(self.frame_11)
-
-        self.frame_10 = QFrame(self.frame_2)
-        self.frame_10.setObjectName(u"frame_10")
-        self.frame_10.setFrameShape(QFrame.StyledPanel)
-        self.frame_10.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_8 = QHBoxLayout(self.frame_10)
-        self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
-        self.label_8 = QLabel(self.frame_10)
-        self.label_8.setObjectName(u"label_8")
-
-        self.horizontalLayout_8.addWidget(self.label_8)
-
-        self.lineEdit_8 = QLineEdit(self.frame_10)
-        self.lineEdit_8.setObjectName(u"lineEdit_8")
-
-        self.horizontalLayout_8.addWidget(self.lineEdit_8)
-
-
-        self.verticalLayout.addWidget(self.frame_10)
-
-        self.frame_12 = QFrame(self.frame_2)
-        self.frame_12.setObjectName(u"frame_12")
-        self.frame_12.setFrameShape(QFrame.StyledPanel)
-        self.frame_12.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_10 = QHBoxLayout(self.frame_12)
-        self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
-        self.label_10 = QLabel(self.frame_12)
-        self.label_10.setObjectName(u"label_10")
-
-        self.horizontalLayout_10.addWidget(self.label_10)
-
-        self.lineEdit_10 = QLineEdit(self.frame_12)
-        self.lineEdit_10.setObjectName(u"lineEdit_10")
-
-        self.horizontalLayout_10.addWidget(self.lineEdit_10)
-
-
-        self.verticalLayout.addWidget(self.frame_12)
-
-        self.frame_13 = QFrame(self.frame)
-        self.frame_13.setObjectName(u"frame_13")
-        self.frame_13.setGeometry(QRect(342, 100, 291, 291))
-        self.frame_13.setStyleSheet(u"QLineEdit{\n"
+        self.idoadatokFrame = QFrame(self.frame)
+        self.idoadatokFrame.setObjectName(u"idoadatokFrame")
+        self.idoadatokFrame.setGeometry(QRect(342, 100, 291, 291))
+        self.idoadatokFrame.setStyleSheet(u"QLineEdit{\n"
 "\n"
 "background-color: rgba(206, 194, 136, 0.5);\n"
 "}\n"
@@ -376,11 +322,11 @@ class Ui_Berkalkulator(object):
 "background-color: rgba(202,238,247, 0.5);\n"
 "color: #000000;\n"
 "border-radius:20px;}")
-        self.frame_13.setFrameShape(QFrame.StyledPanel)
-        self.frame_13.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_2 = QVBoxLayout(self.frame_13)
+        self.idoadatokFrame.setFrameShape(QFrame.StyledPanel)
+        self.idoadatokFrame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_2 = QVBoxLayout(self.idoadatokFrame)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.frame_14 = QFrame(self.frame_13)
+        self.frame_14 = QFrame(self.idoadatokFrame)
         self.frame_14.setObjectName(u"frame_14")
         self.frame_14.setStyleSheet(u"")
         self.frame_14.setFrameShape(QFrame.StyledPanel)
@@ -392,15 +338,15 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_11.addWidget(self.label_11)
 
-        self.lineEdit_11 = QLineEdit(self.frame_14)
-        self.lineEdit_11.setObjectName(u"lineEdit_11")
+        self.TuloraLineEdit = QLineEdit(self.frame_14)
+        self.TuloraLineEdit.setObjectName(u"TuloraLineEdit")
 
-        self.horizontalLayout_11.addWidget(self.lineEdit_11)
+        self.horizontalLayout_11.addWidget(self.TuloraLineEdit)
 
 
         self.verticalLayout_2.addWidget(self.frame_14)
 
-        self.frame_15 = QFrame(self.frame_13)
+        self.frame_15 = QFrame(self.idoadatokFrame)
         self.frame_15.setObjectName(u"frame_15")
         self.frame_15.setStyleSheet(u"")
         self.frame_15.setFrameShape(QFrame.StyledPanel)
@@ -412,15 +358,15 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_12.addWidget(self.label_12)
 
-        self.lineEdit_12 = QLineEdit(self.frame_15)
-        self.lineEdit_12.setObjectName(u"lineEdit_12")
+        self.tuloraMuszakpotlekLineEdit = QLineEdit(self.frame_15)
+        self.tuloraMuszakpotlekLineEdit.setObjectName(u"tuloraMuszakpotlekLineEdit")
 
-        self.horizontalLayout_12.addWidget(self.lineEdit_12)
+        self.horizontalLayout_12.addWidget(self.tuloraMuszakpotlekLineEdit)
 
 
         self.verticalLayout_2.addWidget(self.frame_15)
 
-        self.frame_16 = QFrame(self.frame_13)
+        self.frame_16 = QFrame(self.idoadatokFrame)
         self.frame_16.setObjectName(u"frame_16")
         self.frame_16.setFrameShape(QFrame.StyledPanel)
         self.frame_16.setFrameShadow(QFrame.Raised)
@@ -431,15 +377,15 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_13.addWidget(self.label_13)
 
-        self.lineEdit_13 = QLineEdit(self.frame_16)
-        self.lineEdit_13.setObjectName(u"lineEdit_13")
+        self.jutalomLineEdit = QLineEdit(self.frame_16)
+        self.jutalomLineEdit.setObjectName(u"jutalomLineEdit")
 
-        self.horizontalLayout_13.addWidget(self.lineEdit_13)
+        self.horizontalLayout_13.addWidget(self.jutalomLineEdit)
 
 
         self.verticalLayout_2.addWidget(self.frame_16)
 
-        self.frame_17 = QFrame(self.frame_13)
+        self.frame_17 = QFrame(self.idoadatokFrame)
         self.frame_17.setObjectName(u"frame_17")
         self.frame_17.setFrameShape(QFrame.StyledPanel)
         self.frame_17.setFrameShadow(QFrame.Raised)
@@ -450,17 +396,17 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_14.addWidget(self.label_14)
 
-        self.lineEdit_14 = QLineEdit(self.frame_17)
-        self.lineEdit_14.setObjectName(u"lineEdit_14")
+        self.bruttoberLineEdit = QLineEdit(self.frame_17)
+        self.bruttoberLineEdit.setObjectName(u"bruttoberLineEdit")
 
-        self.horizontalLayout_14.addWidget(self.lineEdit_14)
+        self.horizontalLayout_14.addWidget(self.bruttoberLineEdit)
 
 
         self.verticalLayout_2.addWidget(self.frame_17)
 
         self.frame_23 = QFrame(self.frame)
         self.frame_23.setObjectName(u"frame_23")
-        self.frame_23.setGeometry(QRect(340, 540, 581, 121))
+        self.frame_23.setGeometry(QRect(350, 570, 521, 81))
         self.frame_23.setStyleSheet(u"QPushButton {\n"
 "				 border-radius: 3px;\n"
 "                    font-size: 14px;\n"
@@ -486,18 +432,31 @@ class Ui_Berkalkulator(object):
 "")
         self.frame_23.setFrameShape(QFrame.StyledPanel)
         self.frame_23.setFrameShadow(QFrame.Raised)
-        self.pushButton = QPushButton(self.frame_23)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(60, 50, 100, 36))
-        self.pushButton_2 = QPushButton(self.frame_23)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setGeometry(QRect(200, 50, 100, 36))
-        self.pushButton_3 = QPushButton(self.frame_23)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setGeometry(QRect(320, 50, 100, 36))
-        self.pushButton_4 = QPushButton(self.frame_23)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-        self.pushButton_4.setGeometry(QRect(430, 50, 100, 36))
+        self.horizontalLayout_20 = QHBoxLayout(self.frame_23)
+        self.horizontalLayout_20.setObjectName(u"horizontalLayout_20")
+        self.szamolButton = QPushButton(self.frame_23)
+        self.szamolButton.setObjectName(u"szamolButton")
+
+        self.horizontalLayout_20.addWidget(self.szamolButton)
+
+        self.visszaButton = QPushButton(self.frame_23)
+        self.visszaButton.setObjectName(u"visszaButton")
+        self.visszaButton.setStyleSheet(u"background-color: lightgreen\n"
+"")
+
+        self.horizontalLayout_20.addWidget(self.visszaButton)
+
+        self.RogziteButton = QPushButton(self.frame_23)
+        self.RogziteButton.setObjectName(u"RogziteButton")
+
+        self.horizontalLayout_20.addWidget(self.RogziteButton)
+
+        self.torlesButton = QPushButton(self.frame_23)
+        self.torlesButton.setObjectName(u"torlesButton")
+        self.torlesButton.setStyleSheet(u"background-color: red")
+
+        self.horizontalLayout_20.addWidget(self.torlesButton)
+
         self.frame_24 = QFrame(self.frame)
         self.frame_24.setObjectName(u"frame_24")
         self.frame_24.setGeometry(QRect(450, 430, 361, 80))
@@ -524,10 +483,10 @@ class Ui_Berkalkulator(object):
 
         self.horizontalLayout_19.addWidget(self.label_19)
 
-        self.lineEdit_19 = QLineEdit(self.frame_22)
-        self.lineEdit_19.setObjectName(u"lineEdit_19")
+        self.kifizetendoLineEdit = QLineEdit(self.frame_22)
+        self.kifizetendoLineEdit.setObjectName(u"kifizetendoLineEdit")
 
-        self.horizontalLayout_19.addWidget(self.lineEdit_19)
+        self.horizontalLayout_19.addWidget(self.kifizetendoLineEdit)
 
 
         self.retranslateUi(Berkalkulator)
@@ -542,23 +501,22 @@ class Ui_Berkalkulator(object):
         self.label_16.setText(QCoreApplication.translate("Berkalkulator", u"Munkasz\u00fcneti mv", None))
         self.label_18.setText(QCoreApplication.translate("Berkalkulator", u"T\u00fal\u00f3ra", None))
         self.label.setText(QCoreApplication.translate("Berkalkulator", u"Alapb\u00e9r:", None))
+        self.alabberLineEdit.setText(QCoreApplication.translate("Berkalkulator", u"764300", None))
+        self.alabberLineEdit.setPlaceholderText(QCoreApplication.translate("Berkalkulator", u"764300", None))
         self.label_2.setText(QCoreApplication.translate("Berkalkulator", u"Havib\u00e9res id\u0151b\u00e9r", None))
         self.label_3.setText(QCoreApplication.translate("Berkalkulator", u"T\u00fal\u00f3raalap", None))
         self.label_4.setText(QCoreApplication.translate("Berkalkulator", u"Fizetett szabads\u00e1g", None))
         self.label_5.setText(QCoreApplication.translate("Berkalkulator", u"Munkasz\u00fcneti mv.", None))
         self.label_6.setText(QCoreApplication.translate("Berkalkulator", u"M\u0171szakp\u00f3tl\u00e9k", None))
         self.label_7.setText(QCoreApplication.translate("Berkalkulator", u"T\u00c9R", None))
-        self.label_9.setText(QCoreApplication.translate("Berkalkulator", u"Pihen\u0151napos t\u00fal\u00f3ra", None))
-        self.label_8.setText(QCoreApplication.translate("Berkalkulator", u"T\u00fal\u00f3ra m\u0171szakp\u00f3tl\u00e9k", None))
-        self.label_10.setText(QCoreApplication.translate("Berkalkulator", u"Jutalom", None))
         self.label_11.setText(QCoreApplication.translate("Berkalkulator", u"T\u00fal\u00f3ra", None))
         self.label_12.setText(QCoreApplication.translate("Berkalkulator", u"T\u00fal\u00f3ra M\u0171szakp\u00f3tl\u00e9k", None))
         self.label_13.setText(QCoreApplication.translate("Berkalkulator", u"Jutalom", None))
         self.label_14.setText(QCoreApplication.translate("Berkalkulator", u"Brutt\u00f3 b\u00e9r", None))
-        self.pushButton.setText(QCoreApplication.translate("Berkalkulator", u"Sz\u00e1mol", None))
-        self.pushButton_2.setText(QCoreApplication.translate("Berkalkulator", u"Vissza", None))
-        self.pushButton_3.setText(QCoreApplication.translate("Berkalkulator", u"R\u00f6gz\u00edt\u00e9s", None))
-        self.pushButton_4.setText(QCoreApplication.translate("Berkalkulator", u"Vissza", None))
+        self.szamolButton.setText(QCoreApplication.translate("Berkalkulator", u"Sz\u00e1mol", None))
+        self.visszaButton.setText(QCoreApplication.translate("Berkalkulator", u"Vissza", None))
+        self.RogziteButton.setText(QCoreApplication.translate("Berkalkulator", u"R\u00f6gz\u00edt\u00e9s", None))
+        self.torlesButton.setText(QCoreApplication.translate("Berkalkulator", u"T\u00f6rl\u00e9s", None))
         self.label_19.setText(QCoreApplication.translate("Berkalkulator", u"Kifizetend\u0151", None))
     # retranslateUi
 

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1046</width>
+    <width>896</width>
     <height>695</height>
    </rect>
   </property>
@@ -65,7 +65,7 @@ background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1,
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>991</width>
+      <width>851</width>
       <height>71</height>
      </rect>
     </property>
@@ -83,8 +83,8 @@ background: none</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>0</y>
-       <width>971</width>
+       <y>10</y>
+       <width>831</width>
        <height>61</height>
       </rect>
      </property>
@@ -103,7 +103,7 @@ color: #fff
      <rect>
       <x>650</x>
       <y>100</y>
-      <width>351</width>
+      <width>221</width>
       <height>291</height>
      </rect>
     </property>
@@ -129,7 +129,7 @@ border-radius:20px;}</string>
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>263</width>
+       <width>191</width>
        <height>44</height>
       </rect>
      </property>
@@ -148,7 +148,7 @@ border-radius:20px;}</string>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_15"/>
+       <widget class="QLineEdit" name="ledolgozottNapokLineEdit"/>
       </item>
      </layout>
     </widget>
@@ -157,7 +157,7 @@ border-radius:20px;}</string>
       <rect>
        <x>20</x>
        <y>70</y>
-       <width>263</width>
+       <width>181</width>
        <height>44</height>
       </rect>
      </property>
@@ -176,7 +176,7 @@ border-radius:20px;}</string>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_17"/>
+       <widget class="QLineEdit" name="SzabadsagLineEdit"/>
       </item>
      </layout>
     </widget>
@@ -185,7 +185,7 @@ border-radius:20px;}</string>
       <rect>
        <x>20</x>
        <y>120</y>
-       <width>263</width>
+       <width>181</width>
        <height>44</height>
       </rect>
      </property>
@@ -204,7 +204,7 @@ border-radius:20px;}</string>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_16"/>
+       <widget class="QLineEdit" name="munkaszunetiLineEdit"/>
       </item>
      </layout>
     </widget>
@@ -213,7 +213,7 @@ border-radius:20px;}</string>
       <rect>
        <x>20</x>
        <y>170</y>
-       <width>263</width>
+       <width>181</width>
        <height>44</height>
       </rect>
      </property>
@@ -232,7 +232,7 @@ border-radius:20px;}</string>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_18"/>
+       <widget class="QLineEdit" name="tuloraLineEdit_2"/>
       </item>
      </layout>
     </widget>
@@ -286,7 +286,19 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit"/>
+         <widget class="QLineEdit" name="alabberLineEdit">
+          <property name="font">
+           <font>
+            <family>Academy Engraved LET</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>764300</string>
+          </property>
+          <property name="placeholderText">
+           <string>764300</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -308,7 +320,7 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_2"/>
+         <widget class="QLineEdit" name="haiberesidoberLineEdit"/>
         </item>
        </layout>
       </widget>
@@ -330,7 +342,7 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_3"/>
+         <widget class="QLineEdit" name="tuloraAlapLineEdit"/>
         </item>
        </layout>
       </widget>
@@ -352,7 +364,7 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_4"/>
+         <widget class="QLineEdit" name="fizetettSzLineEdit"/>
         </item>
        </layout>
       </widget>
@@ -374,7 +386,7 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_5"/>
+         <widget class="QLineEdit" name="munkaszuntimvLineEdit"/>
         </item>
        </layout>
       </widget>
@@ -396,7 +408,7 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_6"/>
+         <widget class="QLineEdit" name="mpotlekLineEdit"/>
         </item>
        </layout>
       </widget>
@@ -418,80 +430,14 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_7"/>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item>
-      <widget class="QFrame" name="frame_11">
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_9">
-        <item>
-         <widget class="QLabel" name="label_9">
-          <property name="text">
-           <string>Pihenőnapos túlóra</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_9"/>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item>
-      <widget class="QFrame" name="frame_10">
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_8">
-        <item>
-         <widget class="QLabel" name="label_8">
-          <property name="text">
-           <string>Túlóra műszakpótlék</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_8"/>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item>
-      <widget class="QFrame" name="frame_12">
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_10">
-        <item>
-         <widget class="QLabel" name="label_10">
-          <property name="text">
-           <string>Jutalom</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_10"/>
+         <widget class="QLineEdit" name="terLineEdit"/>
         </item>
        </layout>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QFrame" name="frame_13">
+   <widget class="QFrame" name="idoadatokFrame">
     <property name="geometry">
      <rect>
       <x>342</x>
@@ -538,7 +484,7 @@ border-radius:20px;}</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_11"/>
+         <widget class="QLineEdit" name="TuloraLineEdit"/>
         </item>
        </layout>
       </widget>
@@ -563,7 +509,7 @@ border-radius:20px;}</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_12"/>
+         <widget class="QLineEdit" name="tuloraMuszakpotlekLineEdit"/>
         </item>
        </layout>
       </widget>
@@ -585,7 +531,7 @@ border-radius:20px;}</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_13"/>
+         <widget class="QLineEdit" name="jutalomLineEdit"/>
         </item>
        </layout>
       </widget>
@@ -607,7 +553,7 @@ border-radius:20px;}</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_14"/>
+         <widget class="QLineEdit" name="bruttoberLineEdit"/>
         </item>
        </layout>
       </widget>
@@ -617,10 +563,10 @@ border-radius:20px;}</string>
    <widget class="QFrame" name="frame_23">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>540</y>
-      <width>581</width>
-      <height>121</height>
+      <x>350</x>
+      <y>570</y>
+      <width>521</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -654,58 +600,43 @@ border-radius:20px;
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>50</y>
-       <width>100</width>
-       <height>36</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Számol</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="geometry">
-      <rect>
-       <x>200</x>
-       <y>50</y>
-       <width>100</width>
-       <height>36</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Vissza</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_3">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>50</y>
-       <width>100</width>
-       <height>36</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Rögzítés</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_4">
-     <property name="geometry">
-      <rect>
-       <x>430</x>
-       <y>50</y>
-       <width>100</width>
-       <height>36</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Vissza</string>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_20">
+     <item>
+      <widget class="QPushButton" name="szamolButton">
+       <property name="text">
+        <string>Számol</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="visszaButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: lightgreen
+</string>
+       </property>
+       <property name="text">
+        <string>Vissza</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="RogziteButton">
+       <property name="text">
+        <string>Rögzítés</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="torlesButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: red</string>
+       </property>
+       <property name="text">
+        <string>Törlés</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QFrame" name="frame_24">
     <property name="geometry">
@@ -757,7 +688,7 @@ border-radius:20px;}</string>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_19"/>
+       <widget class="QLineEdit" name="kifizetendoLineEdit"/>
       </item>
      </layout>
     </widget>
