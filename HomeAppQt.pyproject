@@ -1,14 +1,15 @@
 {
     "files": [
         "homeappwidget.py",
-        "form.ui",
+        "MainWindow.ui",
         "UI_files/koltsegvetes.ui",
         "ui_pyfiles/KoltsegvetesWindow.py",
         "koltsegvetes.ui",
         "KoltsegvetesMainWindow.py",
-        "auto.ui",
         "szorakozas.ui",
         "haztartas.ui",
-        "berkalkulator.ui"
+        "berkalkulator.ui",
+        "MainWindow.py",
+        "MainWindowBase.py"
     ]
 }

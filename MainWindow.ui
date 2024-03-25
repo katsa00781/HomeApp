@@ -16,7 +16,9 @@
   <property name="styleSheet">
    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(121, 149, 159, 145), stop:1 rgba(255, 255, 255, 255));
 
-color:#000000
+color:#000000;
+
+font: 400 13pt &quot;Arial&quot;;
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -887,7 +889,6 @@ background-color: rgba(119, 157, 228, 0.6)</string>
     <property name="title">
      <string>Edzés</string>
     </property>
-    <addaction name="actionEdz_stervez_s"/>
     <addaction name="actionEdz_sterv"/>
     <addaction name="actionTestkompozici"/>
     <addaction name="actionEdz_sadatok_felvitele"/>
@@ -931,11 +932,6 @@ background-color: rgba(119, 157, 228, 0.6)</string>
   <action name="actionSorozatok">
    <property name="text">
     <string>Sorozatok</string>
-   </property>
-  </action>
-  <action name="actionEdz_stervez_s">
-   <property name="text">
-    <string>Edzéstervezés</string>
    </property>
   </action>
   <action name="actionEdz_sterv">

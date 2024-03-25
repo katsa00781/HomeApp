@@ -22,7 +22,9 @@ background-color: rgba(202, 238,247, 0.15)
 };
 
 background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1,
-                                      stop: 0 #FFE381, stop: 1 #A1B0BA);</string>
+                                      stop: 0 #FFE381, stop: 1 #A1B0BA);
+
+font: 400 13pt &quot;Arial&quot;;</string>
   </property>
   <widget class="QFrame" name="frame_2">
    <property name="geometry">
@@ -74,8 +76,10 @@ background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1,
      <widget class="QLabel" name="label">
       <property name="font">
        <font>
-        <family>Academy Engraved LET</family>
-        <pointsize>24</pointsize>
+        <family>Arial</family>
+        <pointsize>13</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">

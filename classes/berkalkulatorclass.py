@@ -1,6 +1,6 @@
 import sqlite3
-import berkalkulatorwindow
 from ui_berkalkulator import Ui_Berkalkulator
+
 
 class Berkalkulator:
     def __init__(self, path, parent:None) -> None:
@@ -123,11 +123,11 @@ class Berkalkulator:
 
     def p_tulora(self) -> int:
         napiber = self.napiber()
-        tuloralap = int(self.tulora_p_entry.get()) * 8.22
+        tuloralap = int(self.ui.tuloraLineEdit_2.text()) * 8.22
         pihenonapos_tulora = (napiber * tuloralap) * 1.4
         
-        self.to_pihenonapos_entry.delete(0, END)
-        self.to_pihenonapos_entry.insert(0, int(pihenonapos_tulora))
+        self.ui.TuloraLineEdit.clear()
+        self.ui.TuloraLineEdit.insert(str(pihenonapos_tulora))
         return int(pihenonapos_tulora)
     
     
@@ -136,8 +136,8 @@ class Berkalkulator:
         tulóra_alap = self.tulora_alap()
         m_potlek = tulóra_alap * 0.45
         
-        self.to_muszakpotlek_entry.delete(0, END)
-        self.to_muszakpotlek_entry.insert(0, int(m_potlek))
+        self.ui.tuloraMuszakpotlekLineEdit.clear()
+        self.ui.tuloraMuszakpotlekLineEdit.insert(str(m_potlek))
         
         return int(m_potlek)
         
@@ -146,8 +146,8 @@ class Berkalkulator:
         brutto = self.brutto_ber()
         mesz = brutto * 0.007
         
-        self.mesz_entry.delete(0, END)
-        self.mesz_entry.insert(0, int(mesz))
+        self.ui.meszLineEdit.clear()
+        self.ui.meszLineEdit.insert(str(mesz))
         return int(mesz)
     
     def szja(self):
@@ -156,16 +156,16 @@ class Berkalkulator:
         
         adoeloleg = (brutto - mesz - 333000) * 0.15
         
-        self.adoeloleg_entry.delete(0, END)
-        self.adoeloleg_entry.insert(0, int(adoeloleg))
+        self.ui.szjaLineEdit.clear()
+        self.ui.szjaLineEdit.insert(str(adoeloleg))
         return int(adoeloleg)
     
     def tb_jarulek(self):
         brutto = self.brutto_ber()
         tb_jarulek = brutto * 0.185
         
-        self.tb_jarulek_entry.delete(0, END)
-        self.tb_jarulek_entry.insert(0, int(tb_jarulek))
+        self.ui.tbLineEdit.clear()
+        self.ui.tbLineEdit.insert(str(tb_jarulek))
         
         return tb_jarulek
     
@@ -173,8 +173,8 @@ class Berkalkulator:
         brutto = self.brutto_ber()
         onkentes_dolgozoi = brutto * 0.0015
         
-        self.onkentes_entry.delete(0, END)
-        self.onkentes_entry.insert(0, int(onkentes_dolgozoi))
+        self.ui.onkentesLineEdit.clear()
+        self.ui.onkentesLineEdit.insert(str(onkentes_dolgozoi))
         
         return onkentes_dolgozoi
         
@@ -183,8 +183,8 @@ class Berkalkulator:
         levonasok = [self.mesz(), self.szja(), self.tb_jarulek(), self.onkentes_nyugdij()]
         osszes_levonas = sum(levonasok)
         
-        self.osszes_entry.delete(0, END)
-        self.osszes_entry.insert(0, int(osszes_levonas))
+        self.ui.osszeLevonasLineEdit.clear()
+        self.ui.osszeLevonasLineEdit.insert(str(osszes_levonas))
         
         return osszes_levonas
     
@@ -193,5 +193,5 @@ class Berkalkulator:
         osszes_levonas = self.osszes_levonas()
         kifizetendo = brutto - osszes_levonas
         
-        self.kifizetendo_entry.delete(0, END) 
-        self.kifizetendo_entry.insert(0, int(kifizetendo))    
+        self.ui.kifizetendoLineEdit.clear()
+        self.ui.kifizetendoLineEdit.insert(str(kifizetendo))   
