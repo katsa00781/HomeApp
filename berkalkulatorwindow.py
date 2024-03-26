@@ -19,14 +19,31 @@ class Berkalkulator(QtWidgets.QWidget):
         self.ui.setupUi(self)
         
         
-        self.ui.ledolgozottNapokLineEdit.setText("0")
+        self.ui.ledolgozottNapokLineEdit.setText("20")
         self.ui.SzabadsagLineEdit.setText("0")
         self.ui.munkaszunetiLineEdit.setText("0")
         self.ui.tuloraLineEdit_3.setText("0")
         
-        self.ui.szamolButton.clicked.connect(self.tulora_alap)
+        self.ui.szamolButton.clicked.connect(self.szamol)
+        self.ui.SzabadsagLineEdit.textChanged.connect(self.munkanap_szamol)
         
-    '''def szamol(self):
+    
+    def munkanap_szamol(self):
+        
+        munkanap = 20
+        
+        if int(self.ui.SzabadsagLineEdit.text()) > 0:
+            munkanap = int(self.ui.ledolgozottNapokLineEdit.text()) - int(self.ui.SzabadsagLineEdit.text())  
+        else:
+            munkanap = int(self.ui.ledolgozottNapokLineEdit.text()) 
+        
+        
+        self.ui.ledolgozottNapokLineEdit.clear()
+        
+        
+        
+        self.ui.ledolgozottNapokLineEdit.insert(str(munkanap))  
+    def szamol(self):
         self.havi_beres_idober()
         self.tulora_alap()
         self.fizetett_szabadsag()
@@ -40,7 +57,7 @@ class Berkalkulator(QtWidgets.QWidget):
         self.tb_jarulek()
         self.onkentes_nyugdij()
         self.osszes_levonas()
-        self.netto()'''
+        self.netto()
     
     # Brutto bérhez szükséges számítások
     def napiber(self) -> int:
@@ -61,7 +78,7 @@ class Berkalkulator(QtWidgets.QWidget):
             self.ui.ledolgozottNapokLineEdit.clear()
             self.ui.ledolgozottNapokLineEdit.insert(str(ledolgozott_ido))
         try:
-            haviberes_idober = (int(self.ui.ledolgozottNapokLineEdit.text()) / int(self.ui.ledolgozottNapokLineEdit.text())) * ledolgozott_ido 
+            haviberes_idober = (int(self.ui.alabberLineEdit.text()) / int(self.ui.mrendIdoLineEdit.text())) * ledolgozott_ido 
             self.ui.haiberesidoberLineEdit.clear()
             self.ui.haiberesidoberLineEdit.insert(str(haviberes_idober))
             return int(haviberes_idober)
@@ -87,33 +104,37 @@ class Berkalkulator(QtWidgets.QWidget):
         else:
             return 0
         
+        eredmeny = round(tulóra_osszeg, 1)
+        
         self.ui.tuloraAlapLineEdit.clear()
-        self.ui.tuloraAlapLineEdit.insert(str(tulóra_osszeg))
-        return float(tulóra_osszeg) 
+        self.ui.tuloraAlapLineEdit.insert(str(eredmeny))
+        return float(eredmeny) 
             
             
         
     def fizetett_szabadsag(self) -> int:
         
-        if int(self.ui.SzabadsagLineEdit.text()) >= 0:
+        if int(self.ui.SzabadsagLineEdit.text()) > 0:
             napok = int(self.ui.SzabadsagLineEdit.text()) * 8.17
             fizetett_szabadsag = napok * 7038
         else:
             fizetett_szabadsag = 0  
+            
         
         
         self.ui.fizetettSzLineEdit.clear()
-        self.ui.fizetettSzLineEdit.insert(str(fizetett_szabadsag))
+        self.ui.fizetettSzLineEdit.insert(str((fizetett_szabadsag)))
+        
         return int(fizetett_szabadsag)       
             
         
     def munkaszuneti_munkavegzes(self) -> int:
         napiber = self.napiber()
-        munkaszuneti_ora = int(self.ui.munkaszuntimvLineEdit.text()) * 8.17
+        munkaszuneti_ora = int(self.ui.munkaszunetiLineEdit.text()) * 8.17
         szumma_munkaszuneti = (napiber * munkaszuneti_ora) * 1.45
            
-        self.ui.munkaszunetiLineEdit.clear()
-        self.ui.munkaszunetiLineEdit.insert(str(szumma_munkaszuneti))
+        self.ui.munkaszuntimvLineEdit.clear()
+        self.ui.munkaszuntimvLineEdit.insert(str(szumma_munkaszuneti))
         
         
         return int(szumma_munkaszuneti)   
@@ -122,16 +143,18 @@ class Berkalkulator(QtWidgets.QWidget):
         haviber = self.havi_beres_idober()
         m_potlek = haviber * 0.45
         
+        eredmeny = round(m_potlek, 1)
+        
         self.ui.mpotlekLineEdit.clear()
-        self.ui.mpotlekLineEdit.insert(str(m_potlek))
+        self.ui.mpotlekLineEdit.insert(str(eredmeny))
         
         
-        return int(m_potlek)
+        return int(eredmeny)
         
     def brutto_ber(self)-> int:
         values = [self.havi_beres_idober(), self.tulora_alap(), self.fizetett_szabadsag(), self.munkaszuneti_munkavegzes(), self.muszakpotlek(), 26736 , self.p_tulora(), self.t_muszakpotlek()]
         # values_int = list(map(int, values))
-        if int(self.ui.jutalomLineEdit.text()) >= 0:
+        if int(self.ui.jutalomLineEdit.text()) > 0:
             values.append(int(self.ui.jutalomLineEdit.text()))
         else:
             values.append(0)    
@@ -147,9 +170,10 @@ class Berkalkulator(QtWidgets.QWidget):
         tuloralap = int(self.ui.tuloraLineEdit_3.text()) * 8.22
         pihenonapos_tulora = (napiber * tuloralap) * 1.4
         
+        eredmeny = round(pihenonapos_tulora, 1)
         self.ui.TuloraLineEdit.clear()
-        self.ui.TuloraLineEdit.insert(str(pihenonapos_tulora))
-        return int(pihenonapos_tulora)
+        self.ui.TuloraLineEdit.insert(str(eredmeny))
+        return int(eredmeny)
     
     
     
@@ -157,19 +181,23 @@ class Berkalkulator(QtWidgets.QWidget):
         tulóra_alap = self.tulora_alap()
         m_potlek = tulóra_alap * 0.45
         
-        self.ui.tuloraMuszakpotlekLineEdit.clear()
-        self.ui.tuloraMuszakpotlekLineEdit.insert(str(m_potlek))
+        eredmeny = round(m_potlek, 1)
         
-        return int(m_potlek)
+        self.ui.tuloraMuszakpotlekLineEdit.clear()
+        self.ui.tuloraMuszakpotlekLineEdit.insert(str(eredmeny))
+        
+        return int(eredmeny)
         
     # levonások függvények
     def mesz(self):
         brutto = self.brutto_ber()
         mesz = brutto * 0.007
         
+        eredmeny = round(mesz, 1)
+        
         self.ui.meszLineEdit.clear()
-        self.ui.meszLineEdit.insert(str(mesz))
-        return int(mesz)
+        self.ui.meszLineEdit.insert(str(eredmeny))
+        return int(eredmeny)
     
     def szja(self):
         brutto = self.brutto_ber()
@@ -177,9 +205,11 @@ class Berkalkulator(QtWidgets.QWidget):
         
         adoeloleg = (brutto - mesz - 333000) * 0.15
         
+        eredmeny = round(adoeloleg, 1)
+        
         self.ui.szjaLineEdit.clear()
-        self.ui.szjaLineEdit.insert(str(adoeloleg))
-        return int(adoeloleg)
+        self.ui.szjaLineEdit.insert(str(eredmeny))
+        return int(eredmeny)
     
     def tb_jarulek(self):
         brutto = self.brutto_ber()
@@ -192,7 +222,7 @@ class Berkalkulator(QtWidgets.QWidget):
     
     def onkentes_nyugdij(self):
         brutto = self.brutto_ber()
-        onkentes_dolgozoi = brutto * 0.0015
+        onkentes_dolgozoi = brutto * 0.015
         
         self.ui.onkentesLineEdit.clear()
         self.ui.onkentesLineEdit.insert(str(onkentes_dolgozoi))

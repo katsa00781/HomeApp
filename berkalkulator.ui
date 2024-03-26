@@ -334,7 +334,11 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="haiberesidoberLineEdit"/>
+         <widget class="QLineEdit" name="haiberesidoberLineEdit">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -356,7 +360,11 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="tuloraAlapLineEdit"/>
+         <widget class="QLineEdit" name="tuloraAlapLineEdit">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -378,7 +386,11 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="fizetettSzLineEdit"/>
+         <widget class="QLineEdit" name="fizetettSzLineEdit">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -400,7 +412,11 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="munkaszuntimvLineEdit"/>
+         <widget class="QLineEdit" name="munkaszuntimvLineEdit">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -422,7 +438,11 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="mpotlekLineEdit"/>
+         <widget class="QLineEdit" name="mpotlekLineEdit">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -447,7 +467,11 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="TuloraLineEdit"/>
+         <widget class="QLineEdit" name="TuloraLineEdit">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -469,7 +493,11 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="jutalomLineEdit"/>
+         <widget class="QLineEdit" name="jutalomLineEdit">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -494,7 +522,11 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="tuloraMuszakpotlekLineEdit"/>
+         <widget class="QLineEdit" name="tuloraMuszakpotlekLineEdit">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -516,7 +548,11 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="terLineEdit"/>
+         <widget class="QLineEdit" name="terLineEdit">
+          <property name="text">
+           <string>26300</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -538,7 +574,11 @@ border-radius:20px;}
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="bruttoberLineEdit"/>
+         <widget class="QLineEdit" name="bruttoberLineEdit">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -602,7 +642,7 @@ border-radius:20px;}</string>
            </font>
           </property>
           <property name="text">
-           <string>764300</string>
+           <string>0</string>
           </property>
           <property name="placeholderText">
            <string>764300</string>
@@ -629,7 +669,11 @@ border-radius:20px;}</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="szjaLineEdit"/>
+         <widget class="QLineEdit" name="szjaLineEdit">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -651,7 +695,11 @@ border-radius:20px;}</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="tbLineEdit"/>
+         <widget class="QLineEdit" name="tbLineEdit">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -673,7 +721,11 @@ border-radius:20px;}</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="onkentesLineEdit"/>
+         <widget class="QLineEdit" name="onkentesLineEdit">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -695,7 +747,11 @@ border-radius:20px;}</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="osszeLevonasLineEdit"/>
+         <widget class="QLineEdit" name="osszeLevonasLineEdit">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -830,7 +886,11 @@ border-radius:20px;}</string>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="kifizetendoLineEdit"/>
+       <widget class="QLineEdit" name="kifizetendoLineEdit">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
